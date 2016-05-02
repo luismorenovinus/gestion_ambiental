@@ -1,12 +1,3 @@
-function sortByValue(a, b) {
-    if (a[1] === b[1]) {
-        return 0;
-    }
-    else {
-        return (a[1] < b[1]) ? -1 : 1;
-    }
-}
-
 /*
  * Jeditable - jQuery in place edit plugin
  *
@@ -495,13 +486,6 @@ function sortByValue(a, b) {
                 },
                 content : function(data, settings, original) {
                     /* If it is string assume it is json. */
-                    let array = [];
-                    for(a in json){
-                      array.push([a,json[a]]);
-                    }
-
-                    array.sort(sortByValue);
-
                     if (String == data.constructor) {
                         eval ('var json = ' + data);
                     } else {
