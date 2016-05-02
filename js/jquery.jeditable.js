@@ -57,6 +57,16 @@
   *
   */
 
+/*funcion para ordenar una matriz por valor*/
+function sortByValue(a, b) {
+    if (a[1] === b[1]) {
+        return 0;
+    }
+    else {
+        return (a[1] < b[1]) ? -1 : 1;
+    }
+}
+
 (function($) {
 
     $.fn.editable = function(target, options) {
@@ -485,6 +495,9 @@
                     return(select);
                 },
                 content : function(data, settings, original) {
+                    /* array para crear los option */
+                    let array = [];
+
                     /* If it is string assume it is json. */
                     if (String == data.constructor) {
                         eval ('var json = ' + data);
@@ -492,14 +505,17 @@
                     /* Otherwise assume it is a hash already. */
                         var json = data;
                     }
-                    for (var key in json) {
-                        if (!json.hasOwnProperty(key)) {
-                            continue;
-                        }
-                        if ('selected' == key) {
-                            continue;
-                        }
-                        var option = $('<option />').val(key).append(json[key]);
+                    /* creo una matriz con el json */
+                    for(a in json){
+                      array.push([a,json[a]]);
+                    }
+                    /*ordeno la matriz con la funcion sortByValue*/
+                    array.sort(sortByValue);
+
+                    /*lleno el select con option e informacion traida del arrglo*/
+                    for (let element of array) {
+
+                        var option = $('<option />').val(element[0]).append(element[1]);
                         $('select', this).append(option);
                     }
                     /* Loop option again to set selected. IE needed this... */
