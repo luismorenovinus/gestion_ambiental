@@ -33,7 +33,7 @@
         <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap.min.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap-datepicker.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/bootstrap-datetimepicker.js"></script>
-        <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/jquery.jeditable.js"></script>
+        <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/jquery.jeditable.min.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/jquery.timeago.min.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/highcharts.js"></script>
         <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>js/highcharts-exporting.js"></script>

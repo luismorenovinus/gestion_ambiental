@@ -496,7 +496,7 @@ function sortByValue(a, b) {
                 },
                 content : function(data, settings, original) {
                     /* array para crear los option */
-                    let array = [];
+                    let opcArray = [];
 
                     /* If it is string assume it is json. */
                     if (String == data.constructor) {
@@ -506,14 +506,14 @@ function sortByValue(a, b) {
                         var json = data;
                     }
                     /* creo una matriz con el json */
-                    for(a in json){
-                      array.push([a,json[a]]);
+                    for(element in json){
+                      opcArray.push([element,json[element]]);
                     }
                     /*ordeno la matriz con la funcion sortByValue*/
-                    array.sort(sortByValue);
+                    opcArray.sort(sortByValue);
 
                     /*lleno el select con option e informacion traida del arrglo*/
-                    for (let element of array) {
+                    for (let element of opcArray) {
 
                         var option = $('<option />').val(element[0]).append(element[1]);
                         $('select', this).append(option);
