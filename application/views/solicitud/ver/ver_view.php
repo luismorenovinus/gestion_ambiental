@@ -28,6 +28,7 @@ endforeach;
 foreach($temas as $tema):
     $_temas[$tema->Pk_Id_Tema] = $tema->Nombre;
 endforeach;
+
 //Recorrido para traer todas las formas de recepcion de la base de datos y agregarlos en el dropdown
 foreach($formas as $forma):
     $_formas[$forma->Pk_Id_Recepcion_Forma] = $forma->Nombre;
@@ -130,7 +131,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
         </div>
     </div>
     <!--Fin datos generales-->
-
+    
     <!--Inicio acciones emprendidas-->
     <div class="row-fluid">
         <div class="box-header"><h2>Acciones emprendidas</h2></div>
@@ -145,12 +146,12 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
             <div id="remision" style="display: none">
                 <input type="hidden" value="<?php echo $solicitud->Pk_Id_Remision; ?>" id="id_remision"/>
                 <legend></legend>
-
+                
                 <!--Funcionario-->
                 <label>Seleccione el funcionario al que remitir&aacute; *</label>
                 <?php echo form_dropdown('funcionario', $_funcionarios,  set_value('funcionario', $solicitud->Pk_Id_Funcionario), 'id="funcionario" class="input-large"'); ?>
                 <span class="funcionario"></span>
-
+                
                 <!--Fecha-->
                 <label for="fecha_remision">Fecha</label>
                 <div class="input-append date form_datetime">
@@ -171,7 +172,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
         <div class="clear"></div>
     </div>
     <!--Fin acciones emprendidas-->
-
+    
     <!--Inicio seguimientos-->
     <div class="row-fluid">
         <div class="box-header"><h2>Seguimiento</h2></div>
@@ -187,7 +188,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                 <?php endforeach; ?>
                 <div id="seguimiento"></div>
             </div><br/>
-
+            
             <legend></legend>
 
             <!-- Boton de nuevo seguimiento-->
@@ -216,7 +217,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
         </div>
     </div>
     <!--Fin seguimientos-->
-
+    
     <!--Inicio Solucion-->
     <div class="row-fluid form-inline">
         <div class="box-header"><h2>Respuesta</h2></div>
@@ -229,9 +230,9 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                     <span class="add-on"><i class="icon-calendar"></i></span>
                     <span class="fecha_respuesta"></span>
                 </div>
-                <input type="button" class="btn btn-primary ocultar" value="Guardar" id="guardar_fecha_respuesta" />
+                <input type="button" class="btn btn-primary ocultar" value="Guardar" id="guardar_fecha_respuesta" />    
                 <span id="mensaje_fecha" class="ocultar vacio">Fecha guardada.</span>
-
+                
                 <div>
                     <b>Radicado: </b>
                     <div id="radicado_salida" name="edit" title="Haga clic para modificar el radicado" data-toggle="tooltip"><?php echo $solicitud->Radicado_Respuesta; ?></div>
@@ -241,7 +242,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                 </ul>
                 <div id="descripcion_respuesta" name="edit" title="Haga clic para modificar la respuesta" data-toggle="tooltip"><?php echo $solicitud->Descripcion_Respuesta; ?></div>
             </div>
-        </div>
+        </div>    
     </div>
     <!--Fin solucion-->
 </div>
@@ -254,7 +255,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
             $('[name^=edit]').tooltip({
                 placement: 'left'
             });
-
+             
             //Radicado de entrada
             $('#radicado_entrada').editable('<?php echo site_url('solicitud/modificar/'.$id_solicitud.'/'.'Radicado_Entrada'); ?>', {
                 id   : 'elementid',
@@ -266,33 +267,33 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                 cancel    : 'Cancelar',
                 indicator : '<img src="<?php echo base_url() ?>img/cargando.gif">'
             });
-
+            
             //Tramo
-            $('#tramo').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Tramo/tbl_tramos/Pk_Id_Tramo'); ?>', {
+            $('#tramo').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Tramo/tbl_tramos/Pk_Id_Tramo'); ?>', { 
                 data : '<?php print  json_encode($_tramos); ?>',
                 id   : 'elementid',
                 name : 'nuevo_valor',
                 style   : 'display: block',
                 type   : 'select'
             });
-
+            
             //Area encargada
-            $('#area_encargada').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Area_Encargada/tbl_area_encargada/Pk_Id_Area_Encargada'); ?>', {
+            $('#area_encargada').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Area_Encargada/tbl_area_encargada/Pk_Id_Area_Encargada'); ?>', { 
                 data : '<?php print json_encode($_areas); ?>',
                 id   : 'elementid',
                 name : 'nuevo_valor',
                 style   : 'display: block',
                 type   : 'select'
             });
-
+            
             //Tema
-            $('#tema').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Tema/tbl_temas/Pk_Id_Tema'); ?>', {
+            $('#tema').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Tema/tbl_temas/Pk_Id_Tema'); ?>', { 
                 data : '<?php print  json_encode($_temas); ?>',
                 id   : 'elementid',
                 name : 'nuevo_valor',
                 type   : 'select'
             });
-
+            
             //Nombres
             $('#nombres').editable('<?php echo site_url('solicitud/modificar/'.$id_solicitud.'/'.'Nombres'); ?>', {
                 id   : 'elementid',
@@ -304,7 +305,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                 cancel    : 'Cancelar',
                 indicator : '<img src="<?php echo base_url() ?>img/cargando.gif">'
             });
-
+            
             //Direccion
             $('#direccion').editable('<?php echo site_url('solicitud/modificar/'.$id_solicitud.'/'.'Direccion'); ?>', {
                 id   : 'elementid',
@@ -317,7 +318,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                 cancel    : 'Cancelar',
                 indicator : '<img src="<?php echo base_url() ?>img/cargando.gif">'
             });
-
+            
             //Telefono
             $('#telefono').editable('<?php echo site_url('solicitud/modificar/'.$id_solicitud.'/'.'Telefono'); ?>', {
                 id   : 'elementid',
@@ -330,9 +331,9 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                 cancel    : 'Cancelar',
                 indicator : '<img src="<?php echo base_url() ?>img/cargando.gif">'
             });
-
+            
             //Tema
-            $('#forma_recepcion').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Recepcion_Forma/tbl_recepcion_forma/Pk_Id_Recepcion_Forma'); ?>', {
+            $('#forma_recepcion').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Recepcion_Forma/tbl_recepcion_forma/Pk_Id_Recepcion_Forma'); ?>', { 
                 data : '<?php print  json_encode($_formas); ?>',
                 id   : 'elementid',
                 name : 'nuevo_valor',
@@ -340,21 +341,21 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
             });
 
             // Lugar de recepción
-            $('#lugar_recepcion').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Lugar_Recepcion/tbl_recepcion_lugares/Pk_Id_Recepcion_Lugar'); ?>', {
+            $('#lugar_recepcion').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Lugar_Recepcion/tbl_recepcion_lugares/Pk_Id_Recepcion_Lugar'); ?>', { 
                 data : '<?php print json_encode($_lugares); ?>',
                 id   : 'elementid',
                 name : 'nuevo_valor',
                 type   : 'select'
             });
-
+            
             //Tipos de solicitud
-            $('#tipo_solicitud').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Solicitud_Tipo/tbl_solicitud_tipos/Pk_Id_Solicitud_Tipo'); ?>', {
+            $('#tipo_solicitud').editable('<?php echo site_url('solicitud/modificar_selects/'.$id_solicitud.'/Fk_Id_Solicitud_Tipo/tbl_solicitud_tipos/Pk_Id_Solicitud_Tipo'); ?>', { 
                 data : '<?php print  json_encode($_tipos); ?>',
                 id   : 'elementid',
                 name : 'nuevo_valor',
                 type   : 'select'
             });
-
+            
             //Descripcion de la solicitud
             $('#descripcion_solicitud').editable('<?php echo site_url('solicitud/modificar/'.$id_solicitud.'/'.'Solicitud_Descripcion'); ?>', {
                 id   : 'elementid',
@@ -366,11 +367,11 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                 cancel    : 'Cancelar',
                 indicator : '<img src="<?php echo base_url() ?>img/cargando.gif">'
             });
-
+            
             if($("#accion_emprendida").val() ==3){
                 $("#remision").show('slow');
             }
-
+            
             $('#accion_emprendida').change(function(){
                 $("#guardar_accion_emprendida").removeClass('ocultar');
                 $("#mensaje").addClass('ocultar');
@@ -380,7 +381,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                     $("#remision").show('slow');
                 }
             })
-
+            
             //Boton de guardar accion emprendida
             $("#guardar_accion_emprendida").click(function(){
                 datos = {
@@ -391,7 +392,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                     fecha_remision: $("#fecha_remision").val(),
                     radicado_remision: $("#radicado_remision").val()
                 }
-
+                
                 //Se envia por post la informacion de la remision segun sea el caso
                 $.post("<?php echo site_url('solicitud/modificar_accion_emprendida'); ?>",
                 datos,
@@ -400,7 +401,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                     $("#mensaje").removeClass('ocultar');
                 });//Fin function
             })
-
+            
             //Descripcion accion
             $('#descripcion_accion').editable('<?php echo site_url('solicitud/modificar/'.$id_solicitud.'/'.'Accion_Descripcion'); ?>', {
                 id   : 'elementid',
@@ -413,13 +414,13 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                 indicator : '<img src="<?php echo base_url() ?>img/cargando.gif">'
             });
 
-            //Se declara el contador que numerara los seguimientos que se agreguen
+            //Se declara el contador que numerara los seguimientos que se agreguen 
             count = <?php echo $numero; ?>;
 
             //Accion realizada al guardar un seguimiento
             $("#guardar").click(function(){
                 //console.log($("#nuevo_seguimiento").val())
-
+                
                 //Se envia la descripcion como un array json
                 descripcion = {
                     descripcion: $("#nuevo_seguimiento").val()
@@ -439,7 +440,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
 
                 //Se cierra la ventana
                 $('#myModal').modal('hide');
-
+                
                 //Se aumenta en 1 el contador
                 count++;
             })//Fin clic
@@ -472,7 +473,7 @@ $seguimientos = $this->solicitud_model->ver_seguimientos($id_solicitud);
                     $("#mensaje_fecha").removeClass('ocultar');
                 });//Fin function
             });
-
+            
             //Radicado de salida
             $('#descripcion_respuesta').editable('<?php echo site_url('solicitud/modificar/'.$id_solicitud.'/Respuesta_Descripcion'); ?>', {
                 id   : 'elementid',

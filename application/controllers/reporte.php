@@ -328,9 +328,9 @@ Class Reporte extends CI_Controller{
     /**
      * Reporte que genera la plantilla de solicitudes
      */
-    function plantilla_solicitud(){
+    function solicitud_recepcion(){
         //Se carga la vista que contiene la plantilla
-        $this->load->view('reportes/pdf/plantilla');
+        $this->load->view('reportes/pdf/solicitud_recepcion');
 
         //Se inserta el registro en auditoria enviando numero de modulo, tipo de auditoria y id correspondiente
         $this->auditoria_model->insertar(1, 11, null);
@@ -362,12 +362,12 @@ Class Reporte extends CI_Controller{
     /**
      * Reporte que genera la plantilla de solicitudes
      */
-    function solicitud(){
+    function solicitud_seguimiento(){
         //Se recibe el id de la solicitud
         $id_solicitud = $this->data['id_solicitud'] = $this->uri->segment(3);
 
         //Se carga la vista que contiene el reporte
-        $this->load->view('reportes/pdf/solicitud', $this->data);
+        $this->load->view('reportes/pdf/solicitud_seguimiento', $this->data);
 
         //Se inserta el registro en auditoria enviando numero de modulo, tipo de auditoria y id correspondiente
         $this->auditoria_model->insertar(1, 5, $id_solicitud);

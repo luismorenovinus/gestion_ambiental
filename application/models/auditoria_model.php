@@ -190,7 +190,7 @@ Class Auditoria_model extends CI_Model{
      * @throws 
      */
     function numero_solicitud($id_solicitud){
-        return 'OFAIN-'.str_pad($id_solicitud, 3, 0, STR_PAD_LEFT);
+        return 'VINUS-'.str_pad($id_solicitud, 3, 0, STR_PAD_LEFT);
     }//Fin numero_solicitud
 
     function ultimas_actualizaciones($id_usuario){

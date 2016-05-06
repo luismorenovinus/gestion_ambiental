@@ -37,7 +37,7 @@ if ($id_hoja_vida) {
 					<label>
 						<?php if (isset($curriculo->Recibida) && $curriculo->Recibida == "1") { $tipo = "checked"; }else{ $tipo = ""; } ?>
 						<input id="recibida" type="checkbox" <?php echo $tipo; ?> >
-						La hoja de vida se recibió por OFAIN
+						Recibida por oficinas de atención (móviles y fijas)
 					</label>
 				</div>
 				<div class="controls">
@@ -154,14 +154,10 @@ if ($id_hoja_vida) {
 
 		<!-- Columna 2 -->
 		<div class="span4">
-			<div>
-				<label class="control-label" for="subcontratista">Si está vinculado:</label>
-			</div>
-
 			<div class="well">
 				<!-- Fecha de vinculación -->
 				<div class="control-group">
-					<label class="control-label" for="dia_vinculacion">Fecha de vinculación (para vinculados)</label>
+					<label class="control-label" for="dia_vinculacion">Fecha de vinculación</label>
 					<div class="controls">
 						<!-- Día -->
 						<select id="dia_vinculacion" class="span3">

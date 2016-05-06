@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : Localhost
-Source Server Version : 50505
-Source Host           : 127.0.0.1:3306
+Source Server         : Vinus
+Source Server Version : 50547
+Source Host           : 192.168.1.245:3306
 Source Database       : solicitudes
 
 Target Server Type    : MYSQL
-Target Server Version : 50505
+Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-04-29 16:04:24
+Date: 2016-05-06 15:17:41
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -32,7 +32,7 @@ CREATE TABLE `auditoria` (
   KEY `Fk_Id_Modulo` (`Fk_Id_Modulo`),
   CONSTRAINT `auditoria_ibfk_1` FOREIGN KEY (`Fk_Id_Modulo`) REFERENCES `tbl_modulos` (`Pk_Id_Modulo`),
   CONSTRAINT `auditoria_ibfk_2` FOREIGN KEY (`Fk_Id_Auditoria_Tipo`) REFERENCES `tbl_auditoria_tipo` (`Pk_Id_Auditoria_Tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=64769 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=65142 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of auditoria
@@ -367,46 +367,419 @@ INSERT INTO `auditoria` VALUES ('64725', '2016-04-29 11:07:59', '22', '5', '5', 
 INSERT INTO `auditoria` VALUES ('64726', '2016-04-29 11:09:19', '46', '5', '2', '0');
 INSERT INTO `auditoria` VALUES ('64727', '2016-04-29 11:19:24', '22', '5', '5', '0');
 INSERT INTO `auditoria` VALUES ('64728', '2016-04-29 11:21:12', '46', '5', '2', '0');
-INSERT INTO `auditoria` VALUES ('64729', '2016-04-29 13:52:54', '11', '1', '1', null);
-INSERT INTO `auditoria` VALUES ('64730', '2016-04-29 15:22:29', '2', '0', '3', null);
-INSERT INTO `auditoria` VALUES ('64731', '2016-04-29 15:22:34', '2', '0', '3', null);
-INSERT INTO `auditoria` VALUES ('64732', '2016-04-29 15:23:24', '2', '0', '3', null);
-INSERT INTO `auditoria` VALUES ('64733', '2016-04-29 15:23:28', '1', '1', '3', null);
-INSERT INTO `auditoria` VALUES ('64734', '2016-04-29 15:26:09', '4', '1', '1', '1');
-INSERT INTO `auditoria` VALUES ('64735', '2016-04-29 15:31:06', '4', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64736', '2016-04-29 15:31:11', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64737', '2016-04-29 15:38:47', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64738', '2016-04-29 15:40:44', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64739', '2016-04-29 15:40:46', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64740', '2016-04-29 15:40:49', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64741', '2016-04-29 15:41:03', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64742', '2016-04-29 15:41:13', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64743', '2016-04-29 15:41:20', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64744', '2016-04-29 15:43:58', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64745', '2016-04-29 15:46:41', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64746', '2016-04-29 15:47:53', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64747', '2016-04-29 15:48:18', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64748', '2016-04-29 15:49:13', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64749', '2016-04-29 15:49:16', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64750', '2016-04-29 15:49:19', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64751', '2016-04-29 15:49:20', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64752', '2016-04-29 15:51:18', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64753', '2016-04-29 15:51:20', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64754', '2016-04-29 15:51:21', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64755', '2016-04-29 15:51:26', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64756', '2016-04-29 15:51:27', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64757', '2016-04-29 15:52:15', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64758', '2016-04-29 15:52:22', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64759', '2016-04-29 15:53:15', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64760', '2016-04-29 15:53:18', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64761', '2016-04-29 15:53:23', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64762', '2016-04-29 15:53:30', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64763', '2016-04-29 15:53:33', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64764', '2016-04-29 15:55:54', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64765', '2016-04-29 15:55:56', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64766', '2016-04-29 15:56:00', '6', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64767', '2016-04-29 15:56:02', '7', '1', '1', '2');
-INSERT INTO `auditoria` VALUES ('64768', '2016-04-29 15:56:41', '7', '1', '1', '2');
+INSERT INTO `auditoria` VALUES ('64729', '2016-04-29 13:26:25', '1', '7', '3', null);
+INSERT INTO `auditoria` VALUES ('64730', '2016-04-29 14:02:12', '1', '3', '3', null);
+INSERT INTO `auditoria` VALUES ('64731', '2016-04-29 14:04:09', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64732', '2016-04-29 14:05:00', '1', '3', '3', null);
+INSERT INTO `auditoria` VALUES ('64733', '2016-04-29 15:27:04', '1', '6', '3', null);
+INSERT INTO `auditoria` VALUES ('64734', '2016-04-29 15:40:59', '2', '0', '3', null);
+INSERT INTO `auditoria` VALUES ('64735', '2016-04-29 15:59:24', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64736', '2016-05-02 07:35:06', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64737', '2016-05-02 07:36:15', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64738', '2016-05-02 09:32:28', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64739', '2016-05-02 09:33:10', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64740', '2016-05-02 09:44:07', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64741', '2016-05-02 10:13:52', '1', '7', '3', null);
+INSERT INTO `auditoria` VALUES ('64742', '2016-05-02 10:13:56', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64743', '2016-05-02 10:13:57', '11', '7', '1', null);
+INSERT INTO `auditoria` VALUES ('64744', '2016-05-02 10:18:51', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64745', '2016-05-02 10:19:02', '11', '7', '1', null);
+INSERT INTO `auditoria` VALUES ('64746', '2016-05-02 10:19:24', '11', '7', '1', null);
+INSERT INTO `auditoria` VALUES ('64747', '2016-05-02 10:19:57', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64748', '2016-05-02 10:45:28', '2', '7', '3', null);
+INSERT INTO `auditoria` VALUES ('64749', '2016-05-02 16:01:20', '1', '6', '3', null);
+INSERT INTO `auditoria` VALUES ('64750', '2016-05-02 17:37:20', '1', '30', '3', null);
+INSERT INTO `auditoria` VALUES ('64751', '2016-05-03 07:43:47', '1', '3', '3', null);
+INSERT INTO `auditoria` VALUES ('64752', '2016-05-03 07:54:21', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64753', '2016-05-03 09:11:11', '1', '30', '3', null);
+INSERT INTO `auditoria` VALUES ('64754', '2016-05-03 09:18:54', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64755', '2016-05-03 09:23:37', '30', '30', '5', '6440');
+INSERT INTO `auditoria` VALUES ('64756', '2016-05-03 09:25:24', '30', '30', '5', '6440');
+INSERT INTO `auditoria` VALUES ('64757', '2016-05-03 09:35:31', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64758', '2016-05-03 09:37:02', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64759', '2016-05-03 09:37:06', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64760', '2016-05-03 09:40:15', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64761', '2016-05-03 09:40:19', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64762', '2016-05-03 09:41:50', '30', '30', '5', '6441');
+INSERT INTO `auditoria` VALUES ('64763', '2016-05-03 09:43:41', '30', '30', '5', '6441');
+INSERT INTO `auditoria` VALUES ('64764', '2016-05-03 09:45:42', '1', '6', '3', null);
+INSERT INTO `auditoria` VALUES ('64765', '2016-05-03 09:47:47', '1', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('64766', '2016-05-03 09:48:37', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64767', '2016-05-03 09:50:45', '30', '30', '5', '6440');
+INSERT INTO `auditoria` VALUES ('64768', '2016-05-03 09:56:06', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64769', '2016-05-03 10:00:07', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64770', '2016-05-03 10:02:32', '30', '30', '5', '6440');
+INSERT INTO `auditoria` VALUES ('64771', '2016-05-03 10:05:48', '30', '30', '5', '6441');
+INSERT INTO `auditoria` VALUES ('64772', '2016-05-03 10:06:37', '30', '30', '5', '6442');
+INSERT INTO `auditoria` VALUES ('64773', '2016-05-03 10:07:13', '30', '30', '5', '6443');
+INSERT INTO `auditoria` VALUES ('64774', '2016-05-03 10:07:19', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64775', '2016-05-03 10:08:27', '30', '30', '5', '6444');
+INSERT INTO `auditoria` VALUES ('64776', '2016-05-03 10:22:11', '30', '31', '5', '6445');
+INSERT INTO `auditoria` VALUES ('64777', '2016-05-03 10:22:31', '30', '31', '5', '6445');
+INSERT INTO `auditoria` VALUES ('64778', '2016-05-03 10:22:37', '30', '31', '5', '6445');
+INSERT INTO `auditoria` VALUES ('64779', '2016-05-03 10:22:39', '30', '31', '5', '6445');
+INSERT INTO `auditoria` VALUES ('64780', '2016-05-03 10:23:49', '30', '31', '5', '6445');
+INSERT INTO `auditoria` VALUES ('64781', '2016-05-03 10:24:29', '30', '31', '5', '6445');
+INSERT INTO `auditoria` VALUES ('64782', '2016-05-03 10:24:31', '30', '31', '5', '6445');
+INSERT INTO `auditoria` VALUES ('64783', '2016-05-03 10:32:18', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64784', '2016-05-03 10:40:01', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64785', '2016-05-03 10:46:03', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64786', '2016-05-03 10:51:27', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64787', '2016-05-03 10:53:17', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64788', '2016-05-03 10:56:13', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64789', '2016-05-03 10:58:24', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64790', '2016-05-03 10:59:22', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64791', '2016-05-03 11:08:01', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64792', '2016-05-03 11:12:37', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64793', '2016-05-03 11:14:35', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64794', '2016-05-03 11:23:26', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64795', '2016-05-03 11:30:09', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64796', '2016-05-03 11:38:21', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64797', '2016-05-03 11:43:38', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64798', '2016-05-03 11:46:51', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64799', '2016-05-03 11:49:44', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64800', '2016-05-03 11:50:05', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64801', '2016-05-03 11:54:48', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64802', '2016-05-03 11:56:42', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64803', '2016-05-03 11:56:54', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64804', '2016-05-03 12:01:29', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64805', '2016-05-03 12:03:57', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64806', '2016-05-03 12:05:29', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64807', '2016-05-03 12:07:53', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64808', '2016-05-03 12:09:10', '2', '30', '3', null);
+INSERT INTO `auditoria` VALUES ('64809', '2016-05-03 12:10:51', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64810', '2016-05-03 12:12:21', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64811', '2016-05-03 12:16:20', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64812', '2016-05-03 12:16:50', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64813', '2016-05-03 12:19:40', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64814', '2016-05-03 12:21:38', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64815', '2016-05-03 12:24:03', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64816', '2016-05-03 12:24:49', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64817', '2016-05-03 12:25:34', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64818', '2016-05-03 12:27:36', '47', '31', '7', null);
+INSERT INTO `auditoria` VALUES ('64819', '2016-05-03 12:28:07', '2', '0', '3', null);
+INSERT INTO `auditoria` VALUES ('64820', '2016-05-03 12:28:30', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64821', '2016-05-03 14:00:09', '1', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('64822', '2016-05-03 14:11:47', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64823', '2016-05-03 14:17:04', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64824', '2016-05-03 14:23:01', '30', '31', '5', '6460');
+INSERT INTO `auditoria` VALUES ('64825', '2016-05-03 14:23:10', '30', '31', '5', '6460');
+INSERT INTO `auditoria` VALUES ('64826', '2016-05-03 14:28:06', '30', '31', '5', '6460');
+INSERT INTO `auditoria` VALUES ('64827', '2016-05-03 14:33:15', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64828', '2016-05-03 14:43:50', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64829', '2016-05-03 15:11:17', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64830', '2016-05-03 15:16:29', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64831', '2016-05-03 15:25:08', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64832', '2016-05-03 15:28:48', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64833', '2016-05-03 15:34:17', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64834', '2016-05-03 15:37:53', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64835', '2016-05-03 15:49:48', '1', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('64836', '2016-05-03 15:50:05', '2', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('64837', '2016-05-03 15:54:46', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64838', '2016-05-03 15:56:29', '30', '31', '5', '6463');
+INSERT INTO `auditoria` VALUES ('64839', '2016-05-03 15:57:07', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64840', '2016-05-03 15:57:09', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64841', '2016-05-03 15:59:13', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64842', '2016-05-03 15:59:29', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64843', '2016-05-03 16:00:14', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64844', '2016-05-03 16:01:52', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64845', '2016-05-03 16:01:54', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64846', '2016-05-03 16:02:12', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64847', '2016-05-03 16:02:52', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64848', '2016-05-03 16:03:53', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64849', '2016-05-03 16:04:27', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64850', '2016-05-03 16:04:42', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64851', '2016-05-03 16:06:49', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64852', '2016-05-03 16:07:22', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64853', '2016-05-03 21:25:20', '2', '0', '3', null);
+INSERT INTO `auditoria` VALUES ('64854', '2016-05-04 08:46:07', '1', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('64855', '2016-05-04 09:14:55', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('64856', '2016-05-04 09:15:54', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('64857', '2016-05-04 09:29:57', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64858', '2016-05-04 09:34:28', '1', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('64859', '2016-05-04 09:39:50', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('64860', '2016-05-04 09:39:51', '1', '7', '3', null);
+INSERT INTO `auditoria` VALUES ('64861', '2016-05-04 09:40:07', '11', '7', '1', null);
+INSERT INTO `auditoria` VALUES ('64862', '2016-05-04 09:40:40', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('64863', '2016-05-04 09:42:27', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64864', '2016-05-04 09:43:46', '11', '7', '1', null);
+INSERT INTO `auditoria` VALUES ('64865', '2016-05-04 09:45:01', '11', '1', '1', null);
+INSERT INTO `auditoria` VALUES ('64866', '2016-05-04 09:49:21', '2', '7', '3', null);
+INSERT INTO `auditoria` VALUES ('64867', '2016-05-04 09:49:31', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('64868', '2016-05-04 09:50:36', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('64869', '2016-05-04 09:59:12', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('64870', '2016-05-04 09:59:33', '1', '7', '3', null);
+INSERT INTO `auditoria` VALUES ('64871', '2016-05-04 10:00:18', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('64872', '2016-05-04 10:11:43', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('64873', '2016-05-04 10:12:34', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('64874', '2016-05-04 10:16:22', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('64875', '2016-05-04 10:20:55', '1', '7', '3', null);
+INSERT INTO `auditoria` VALUES ('64876', '2016-05-04 10:21:05', '11', '7', '1', null);
+INSERT INTO `auditoria` VALUES ('64877', '2016-05-04 10:21:17', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64878', '2016-05-04 11:10:05', '2', '7', '3', null);
+INSERT INTO `auditoria` VALUES ('64879', '2016-05-04 14:57:56', '1', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('64880', '2016-05-04 15:18:50', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64881', '2016-05-04 15:24:28', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64882', '2016-05-04 15:27:43', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64883', '2016-05-04 15:32:28', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64884', '2016-05-04 15:34:16', '1', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('64885', '2016-05-04 15:35:44', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('64886', '2016-05-04 15:42:17', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('64887', '2016-05-04 15:42:28', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64888', '2016-05-04 15:47:00', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64889', '2016-05-04 15:50:14', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64890', '2016-05-04 15:53:23', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64891', '2016-05-04 15:58:51', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64892', '2016-05-04 16:00:23', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64893', '2016-05-04 16:04:21', '2', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('64894', '2016-05-04 16:04:33', '1', '32', '3', null);
+INSERT INTO `auditoria` VALUES ('64895', '2016-05-04 16:16:29', '30', '32', '5', '5837');
+INSERT INTO `auditoria` VALUES ('64896', '2016-05-04 16:16:33', '30', '32', '5', '5837');
+INSERT INTO `auditoria` VALUES ('64897', '2016-05-04 16:16:41', '24', '32', '1', null);
+INSERT INTO `auditoria` VALUES ('64898', '2016-05-04 16:17:36', '2', '32', '3', null);
+INSERT INTO `auditoria` VALUES ('64899', '2016-05-04 16:53:07', '1', '30', '3', null);
+INSERT INTO `auditoria` VALUES ('64900', '2016-05-04 16:56:38', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64901', '2016-05-04 17:00:14', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64902', '2016-05-04 17:06:50', '2', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('64903', '2016-05-04 17:12:26', '1', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('64904', '2016-05-04 17:13:46', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64905', '2016-05-04 17:18:09', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64906', '2016-05-04 17:19:38', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64907', '2016-05-04 17:27:04', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64908', '2016-05-04 17:29:30', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64909', '2016-05-04 17:30:24', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64910', '2016-05-04 17:30:50', '30', '30', '5', '6487');
+INSERT INTO `auditoria` VALUES ('64911', '2016-05-04 17:33:17', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64912', '2016-05-04 17:37:56', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64913', '2016-05-04 17:41:00', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64914', '2016-05-04 17:41:37', '2', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('64915', '2016-05-04 17:42:08', '1', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('64916', '2016-05-04 17:43:43', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64917', '2016-05-04 17:44:18', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64918', '2016-05-04 17:44:57', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64919', '2016-05-04 17:47:32', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('64920', '2016-05-04 17:48:51', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64921', '2016-05-04 17:51:34', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64922', '2016-05-04 17:54:48', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64923', '2016-05-04 17:56:36', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64924', '2016-05-04 17:59:15', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64925', '2016-05-04 18:03:42', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64926', '2016-05-04 18:08:50', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64927', '2016-05-04 18:11:27', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64928', '2016-05-04 18:13:16', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64929', '2016-05-04 18:14:52', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64930', '2016-05-04 19:27:27', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64931', '2016-05-04 19:28:42', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64932', '2016-05-04 19:31:12', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64933', '2016-05-04 19:32:02', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64934', '2016-05-04 19:33:10', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64935', '2016-05-05 09:30:04', '1', '30', '3', null);
+INSERT INTO `auditoria` VALUES ('64936', '2016-05-05 09:31:06', '47', '30', '7', null);
+INSERT INTO `auditoria` VALUES ('64937', '2016-05-05 09:31:31', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64938', '2016-05-05 09:40:26', '1', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('64939', '2016-05-05 09:41:19', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64940', '2016-05-05 09:42:33', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64941', '2016-05-05 09:44:49', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64942', '2016-05-05 09:45:40', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64943', '2016-05-05 09:47:02', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64944', '2016-05-05 09:48:50', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64945', '2016-05-05 09:51:53', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64946', '2016-05-05 09:52:06', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64947', '2016-05-05 09:53:44', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64948', '2016-05-05 09:53:47', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64949', '2016-05-05 09:54:12', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64950', '2016-05-05 09:54:19', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64951', '2016-05-05 09:58:56', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64952', '2016-05-05 09:59:10', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64953', '2016-05-05 10:00:32', '30', '30', '5', '6503');
+INSERT INTO `auditoria` VALUES ('64954', '2016-05-05 10:00:48', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64955', '2016-05-05 10:01:16', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64956', '2016-05-05 10:01:33', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64957', '2016-05-05 10:02:36', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64958', '2016-05-05 10:22:30', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64959', '2016-05-05 10:25:58', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64960', '2016-05-05 10:41:17', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64961', '2016-05-05 10:43:48', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64962', '2016-05-05 10:47:12', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64963', '2016-05-05 10:48:43', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64964', '2016-05-05 10:52:39', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64965', '2016-05-05 10:54:13', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64966', '2016-05-05 10:54:56', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64967', '2016-05-05 10:58:59', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64968', '2016-05-05 11:03:30', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64969', '2016-05-05 11:09:37', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64970', '2016-05-05 11:10:17', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64971', '2016-05-05 11:11:20', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64972', '2016-05-05 11:14:01', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64973', '2016-05-05 11:15:19', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64974', '2016-05-05 11:23:24', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64975', '2016-05-05 11:27:17', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64976', '2016-05-05 11:27:46', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64977', '2016-05-05 11:32:23', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64978', '2016-05-05 11:33:02', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64979', '2016-05-05 11:34:23', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64980', '2016-05-05 11:34:45', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64981', '2016-05-05 11:35:15', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64982', '2016-05-05 11:37:00', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64983', '2016-05-05 11:37:23', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64984', '2016-05-05 11:37:40', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('64985', '2016-05-05 11:39:39', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64986', '2016-05-05 11:39:45', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64987', '2016-05-05 11:39:48', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64988', '2016-05-05 11:40:39', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('64989', '2016-05-05 11:41:49', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64990', '2016-05-05 11:44:34', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64991', '2016-05-05 11:48:59', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64992', '2016-05-05 11:51:19', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64993', '2016-05-05 11:53:26', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64994', '2016-05-05 11:55:30', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64995', '2016-05-05 11:58:07', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64996', '2016-05-05 12:00:06', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64997', '2016-05-05 12:01:56', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('64998', '2016-05-05 14:18:39', '2', '0', '3', null);
+INSERT INTO `auditoria` VALUES ('64999', '2016-05-05 14:18:45', '1', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('65000', '2016-05-05 14:21:51', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65001', '2016-05-05 14:24:51', '1', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('65002', '2016-05-05 14:25:22', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65003', '2016-05-05 14:25:34', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65004', '2016-05-05 14:26:31', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65005', '2016-05-05 14:27:42', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65006', '2016-05-05 14:28:37', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65007', '2016-05-05 14:30:22', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65008', '2016-05-05 14:31:41', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65009', '2016-05-05 14:33:19', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65010', '2016-05-05 14:36:32', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65011', '2016-05-05 14:37:51', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65012', '2016-05-05 14:38:30', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65013', '2016-05-05 14:41:42', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65014', '2016-05-05 14:42:09', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65015', '2016-05-05 14:42:44', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65016', '2016-05-05 14:43:31', '30', '5', '5', '6539');
+INSERT INTO `auditoria` VALUES ('65017', '2016-05-05 14:43:37', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65018', '2016-05-05 14:43:56', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65019', '2016-05-05 14:44:50', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65020', '2016-05-05 14:45:47', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65021', '2016-05-05 14:46:31', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65022', '2016-05-05 15:03:40', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65023', '2016-05-05 15:04:20', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65024', '2016-05-05 15:05:44', '1', '30', '3', null);
+INSERT INTO `auditoria` VALUES ('65025', '2016-05-05 15:11:56', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65026', '2016-05-05 15:15:04', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65027', '2016-05-05 15:15:34', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65028', '2016-05-05 15:16:12', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65029', '2016-05-05 15:18:36', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65030', '2016-05-05 15:19:24', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65031', '2016-05-05 15:19:52', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65032', '2016-05-05 15:20:31', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65033', '2016-05-05 15:22:34', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65034', '2016-05-05 15:22:34', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65035', '2016-05-05 15:22:39', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65036', '2016-05-05 15:22:41', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65037', '2016-05-05 15:22:45', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65038', '2016-05-05 15:23:11', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65039', '2016-05-05 15:25:55', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65040', '2016-05-05 15:28:07', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65041', '2016-05-05 15:30:01', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65042', '2016-05-05 15:30:35', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65043', '2016-05-05 15:30:54', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65044', '2016-05-05 15:31:42', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65045', '2016-05-05 15:32:01', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65046', '2016-05-05 15:32:08', '46', '30', '2', '0');
+INSERT INTO `auditoria` VALUES ('65047', '2016-05-05 15:32:26', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65048', '2016-05-05 15:39:52', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65049', '2016-05-05 15:39:58', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65050', '2016-05-05 15:40:34', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65051', '2016-05-05 15:41:33', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65052', '2016-05-05 15:42:21', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65053', '2016-05-05 15:43:08', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65054', '2016-05-05 15:44:39', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65055', '2016-05-05 15:45:58', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65056', '2016-05-05 15:46:02', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65057', '2016-05-05 15:48:53', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65058', '2016-05-05 15:50:42', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65059', '2016-05-05 15:51:35', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65060', '2016-05-05 15:52:21', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65061', '2016-05-05 15:56:49', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65062', '2016-05-05 15:56:57', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65063', '2016-05-05 15:58:22', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65064', '2016-05-05 15:59:53', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65065', '2016-05-05 16:00:18', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65066', '2016-05-05 16:01:45', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65067', '2016-05-05 16:03:24', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65068', '2016-05-05 16:04:59', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65069', '2016-05-05 16:05:02', '22', '31', '5', '0');
+INSERT INTO `auditoria` VALUES ('65070', '2016-05-05 16:07:14', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65071', '2016-05-05 16:08:22', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65072', '2016-05-05 16:10:30', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65073', '2016-05-05 16:12:55', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65074', '2016-05-05 16:16:46', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65075', '2016-05-05 16:18:48', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65076', '2016-05-05 16:21:13', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65077', '2016-05-05 16:21:36', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65078', '2016-05-05 16:22:19', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65079', '2016-05-05 16:24:12', '22', '30', '5', '0');
+INSERT INTO `auditoria` VALUES ('65080', '2016-05-05 16:24:51', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65081', '2016-05-05 16:25:35', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65082', '2016-05-05 16:28:47', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65083', '2016-05-05 16:30:38', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65084', '2016-05-05 16:31:12', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65085', '2016-05-05 16:33:32', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65086', '2016-05-05 16:36:14', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65087', '2016-05-05 16:36:24', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65088', '2016-05-05 16:38:08', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65089', '2016-05-05 16:38:39', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65090', '2016-05-05 16:40:35', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65091', '2016-05-05 16:41:33', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65092', '2016-05-05 16:43:15', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65093', '2016-05-05 16:44:14', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65094', '2016-05-05 16:44:15', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65095', '2016-05-05 16:45:09', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65096', '2016-05-05 16:45:26', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65097', '2016-05-05 16:45:41', '46', '31', '2', '0');
+INSERT INTO `auditoria` VALUES ('65098', '2016-05-05 16:48:05', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65099', '2016-05-05 16:48:33', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65100', '2016-05-05 16:51:04', '2', '31', '3', null);
+INSERT INTO `auditoria` VALUES ('65101', '2016-05-05 17:14:24', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65102', '2016-05-05 17:14:48', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65103', '2016-05-05 17:21:06', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65104', '2016-05-05 17:24:30', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65105', '2016-05-05 17:27:40', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65106', '2016-05-05 17:28:13', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65107', '2016-05-05 17:30:37', '2', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('65108', '2016-05-06 08:31:36', '1', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('65109', '2016-05-06 08:38:27', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65110', '2016-05-06 08:39:56', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65111', '2016-05-06 08:50:19', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65112', '2016-05-06 08:53:03', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65113', '2016-05-06 08:56:16', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65114', '2016-05-06 09:00:23', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65115', '2016-05-06 09:03:25', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65116', '2016-05-06 09:05:35', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65117', '2016-05-06 09:15:48', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65118', '2016-05-06 09:17:54', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65119', '2016-05-06 09:24:44', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65120', '2016-05-06 09:28:51', '2', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('65121', '2016-05-06 10:11:06', '1', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('65122', '2016-05-06 13:23:49', '1', '1', '3', null);
+INSERT INTO `auditoria` VALUES ('65123', '2016-05-06 14:09:47', '1', '5', '3', null);
+INSERT INTO `auditoria` VALUES ('65124', '2016-05-06 14:09:57', '11', '5', '1', null);
+INSERT INTO `auditoria` VALUES ('65125', '2016-05-06 14:29:09', '11', '5', '1', null);
+INSERT INTO `auditoria` VALUES ('65126', '2016-05-06 14:33:18', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65127', '2016-05-06 14:38:20', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65128', '2016-05-06 14:42:50', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65129', '2016-05-06 14:44:04', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65130', '2016-05-06 14:45:56', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65131', '2016-05-06 14:47:47', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65132', '2016-05-06 14:51:58', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65133', '2016-05-06 14:55:50', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65134', '2016-05-06 14:58:28', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65135', '2016-05-06 15:00:38', '30', '5', '5', '6599');
+INSERT INTO `auditoria` VALUES ('65136', '2016-05-06 15:02:49', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65137', '2016-05-06 15:06:16', '22', '5', '5', '0');
+INSERT INTO `auditoria` VALUES ('65138', '2016-05-06 15:07:09', '30', '5', '5', '6600');
+INSERT INTO `auditoria` VALUES ('65139', '2016-05-06 15:09:02', '46', '5', '2', '0');
+INSERT INTO `auditoria` VALUES ('65140', '2016-05-06 15:09:34', '30', '5', '5', '6599');
+INSERT INTO `auditoria` VALUES ('65141', '2016-05-06 15:17:22', '11', '1', '1', null);
 
 -- ----------------------------
 -- Table structure for capacitaciones
@@ -511,11 +884,12 @@ CREATE TABLE `funcionarios` (
   KEY `Fk_Id_Cargo` (`Fk_Id_Cargo`),
   CONSTRAINT `funcionarios_ibfk_1` FOREIGN KEY (`Fk_Id_Empresa`) REFERENCES `tbl_empresas` (`Pk_Id_Empresa`),
   CONSTRAINT `funcionarios_ibfk_2` FOREIGN KEY (`Fk_Id_Cargo`) REFERENCES `tbl_cargos` (`Pk_Id_Cargo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of funcionarios
 -- ----------------------------
+INSERT INTO `funcionarios` VALUES ('1', 'John Arley', 'Cano Salinas', 'john.cano@vinus.com.co', '35', '1', '1');
 
 -- ----------------------------
 -- Table structure for hojas_vida
@@ -549,7 +923,7 @@ CREATE TABLE `hojas_vida` (
   PRIMARY KEY (`Pk_Id_Hoja_Vida`),
   KEY `Fk_Id_Sector` (`Fk_Id_Sector`),
   KEY `Fk_Id_Oficio` (`Fk_Id_Oficio`)
-) ENGINE=InnoDB AUTO_INCREMENT=6440 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6601 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of hojas_vida
@@ -564,7 +938,7 @@ INSERT INTO `hojas_vida` VALUES ('2599', '0', 'Calle 31 CA No.89 E 78', '1550521
 INSERT INTO `hojas_vida` VALUES ('2625', '0', 'Calle 17 No.14-68  Calle Robles', '70141354', null, '1981-12-29', null, '0000-00-00', '105', '0', '345', '18', '1', '0', '0', '0', '1', '', 'VICTOR EMILIO SEPULVEDA GALLEGO', '', '0', '4061353', '', '0');
 INSERT INTO `hojas_vida` VALUES ('4032', '0', 'Calle 44 No.79-89 apto 504', '1039457850', null, '1992-05-29', null, '0000-00-00', '105', '0', '345', '18', '1', '0', '0', '0', '2', '', 'XIOMARA SERNA GARCIA', '', '0', '4128798-3116083055', '', '0');
 INSERT INTO `hojas_vida` VALUES ('4959', '0', 'CRA 45 A CLL 110-70', '1044121848', null, '1995-06-28', null, '0000-00-00', '105', '0', '339', '18', '1', '0', '0', '0', '2', '', 'MARIA DANIELA LONDOÑO POSADA', '', '0', '3148829578', '', '0');
-INSERT INTO `hojas_vida` VALUES ('5837', '0', 'CLLE 49 49-32', '1035869806', null, '1995-01-26', null, '0000-00-00', '105', '0', '343', '18', '1', '0', '0', '0', '2', '', 'LINA MARIA GALLEGO DIAZ', '', '0', '6010972 - 3012919465', '', '0');
+INSERT INTO `hojas_vida` VALUES ('5837', '1', 'CLLE 49 # 49-32', '1035869806', '2016-05-04', '1995-01-26', null, '2016-04-01', '105', '159', '343', '18', '1', '206', '209', '225', '2', '3', 'LINA MARIA GALLEGO DIAZ', '', '0', '6010972 - 3012919465', '', '0');
 INSERT INTO `hojas_vida` VALUES ('6355', '0', 'Carrera 46B Cl. 47A-26', '10967153', '2016-04-20', '1985-08-05', null, '0000-00-00', '0', '0', '343', '0', '1', '0', '0', '0', '1', '', 'JULIO CESAR MARTINEZ ZARATE', '', '0', '3006248394', '', '0');
 INSERT INTO `hojas_vida` VALUES ('6356', '0', 'BARRIO BUENOS AIRES', '71170470', '2016-04-26', '1957-07-01', null, '0000-00-00', '0', '146', '348', '0', '5', '0', '208', '0', '1', '', 'HUMBERTO DE JESUS ZAPATA VALDEZ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '8632797-3137065650', 'C-01', '0');
 INSERT INTO `hojas_vida` VALUES ('6357', '0', 'CALLE 17 N°24-24', '71191664', '2016-04-26', '1980-01-06', null, '0000-00-00', '0', '146', '308', '0', '5', '0', '207', '0', '1', '', 'FELIX ALBERTO ARCINIEGAS DELGADO', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3123166019-3142882078', 'C-02', '0');
@@ -640,6 +1014,167 @@ INSERT INTO `hojas_vida` VALUES ('6436', '0', 'CARRERA 13 # 19-30', '70256253', 
 INSERT INTO `hojas_vida` VALUES ('6437', '0', '', '9847364', null, '1972-08-08', null, '0000-00-00', '0', '132', '348', '0', '5', '0', '207', '0', '1', '', 'WILLIAM AUGUSTO SUAREZ GOMEZ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3215408785', 'C-71', '0');
 INSERT INTO `hojas_vida` VALUES ('6438', '0', 'SECTOR JUAN XXIII', '22034414', null, '1978-04-24', null, '0000-00-00', '0', '0', '369', '0', '5', '0', '211', '221', '1', '', 'GIRLESA MILENA MEDINA LAVERDE', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3206212688-3106564787', 'C-72', '0');
 INSERT INTO `hojas_vida` VALUES ('6439', '0', '', '3552405', null, '1985-12-25', null, '0000-00-00', '0', '146', '350', '0', '5', '0', '209', '0', '1', '', 'RAUL ALBERTO MONSALVE CEBALLOS', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3117417622-3128594062', 'C-73', '0');
+INSERT INTO `hojas_vida` VALUES ('6440', '0', 'BARRIO SAN DIEGO', '1001389361', '2016-05-03', '1987-09-19', null, '0000-00-00', '0', '132', '369', '0', '30', '0', '208', '0', '1', '', 'GELMER ANDRES HENAO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3226716194', 'CM1-01', '0');
+INSERT INTO `hojas_vida` VALUES ('6441', '0', '', '43482407', '2016-05-03', '1974-10-02', null, '0000-00-00', '0', '132', '309', '0', '30', '0', '208', '0', '2', '', 'ERMILENCY RUTH BUILES MARIN', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS ', '0', '3117584061', 'CM1-02', '0');
+INSERT INTO `hojas_vida` VALUES ('6442', '0', '', '70135148', '2016-05-03', '1967-10-03', null, '0000-00-00', '0', '132', '316', '0', '30', '0', '208', '0', '1', '', 'JOSE DE JESUS MONTOYA POSADA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3148076879', 'CM1-03', '0');
+INSERT INTO `hojas_vida` VALUES ('6443', '0', '', '1035391361', '2016-05-03', '1995-11-16', null, '0000-00-00', '0', '129', '324', '0', '30', '0', '209', '0', '1', '', 'JULIAN YESID CARREÑO SANCHEZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3148095350', 'CM1-04', '0');
+INSERT INTO `hojas_vida` VALUES ('6444', '0', 'BARRIO EL PLATINO', '1035391019', '2016-05-03', '1994-08-25', '2016-05-03', '0000-00-00', '0', '129', '348', '0', '30', '0', '209', '0', '1', '', 'EDWIN MAURICIO ACEVEDO SERNA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS ', '1', '3103816809', 'CM1-05', '0');
+INSERT INTO `hojas_vida` VALUES ('6445', '0', 'villa nelly', '9860570', '2016-05-03', '1976-01-11', '2016-05-03', '0000-00-00', '0', '149', '324', '0', '31', '0', '209', '220', '1', '1', 'DIVIER ANTONIO RESTREPO JIMENEZ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3217479363', 'CM2-01', '0');
+INSERT INTO `hojas_vida` VALUES ('6446', '0', '', '1001389519', null, '1989-01-16', '2016-05-03', '0000-00-00', '0', '132', '323', '0', '30', '0', '209', '0', '2', '', 'LEIDY CLEIDY PULGARIN FORONDA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS ', '1', '3148404252', 'CM1-06', '0');
+INSERT INTO `hojas_vida` VALUES ('6447', '0', 'BARRIO PÉNJAMO', '1035390690', null, '1993-07-10', '2016-05-03', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '2', '', 'ADRIANA MARCELA CARDONA VERGARA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS ', '1', '3216613708', 'CM1-07', '0');
+INSERT INTO `hojas_vida` VALUES ('6448', '0', 'SAN DIEGO', '71452504', null, '1984-05-10', '2016-05-03', '0000-00-00', '0', '148', '369', '0', '31', '0', '208', '0', '1', '1', 'OVIDIO ALBEIRO MARIN ', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3136252102', 'CM2-02', '0');
+INSERT INTO `hojas_vida` VALUES ('6449', '0', 'BARRIO CALLE NUEVA ', '71174164', null, '1978-04-30', '2016-05-03', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '1', '', 'OSSMAR ALEJANDRO ZAPATA ARIAS ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS ', '1', '3137301060', 'CM1-08', '0');
+INSERT INTO `hojas_vida` VALUES ('6450', '0', 'CALLE EL COMANDO', '1007335143', null, '1995-02-03', '2016-05-03', '0000-00-00', '0', '148', '369', '0', '31', '0', '208', '0', '1', '1', 'ARBEY FRANCO PINEDA', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3116382892', 'CM2-03', '0');
+INSERT INTO `hojas_vida` VALUES ('6451', '0', 'BARRIO EL PLATINO', '1035389084', null, '1988-08-28', '2016-05-03', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '1', '', 'DEIMAR ALEXANDER CARDONA FRANCO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS ', '1', '3105221762', 'CM1-09', '0');
+INSERT INTO `hojas_vida` VALUES ('6452', '0', 'VEREDA EL CADILLO', '103539081', null, '1993-11-27', '2016-05-03', '0000-00-00', '0', '132', '330', '0', '31', '0', '209', '0', '1', '1', 'FABIAN ANDRES QUINTANA CASTAÑO ', 'RECIBIDO POR OFICINA MOVIL-2 CISNERO ', '1', '3218121913', 'CM2-04', '0');
+INSERT INTO `hojas_vida` VALUES ('6453', '0', '', '1001389411', null, '1996-05-11', '2016-05-03', '0000-00-00', '0', '132', '313', '0', '30', '0', '209', '0', '1', '', 'WILMAR ERNEY BENAVIDES', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS ', '1', '3136836853', 'CM1-10', '0');
+INSERT INTO `hojas_vida` VALUES ('6454', '0', 'CALLE PRINCIPAL', '1000393871', null, '1995-06-30', '2016-05-03', '0000-00-00', '0', '132', '369', '0', '31', '0', '208', '0', '1', '1', 'FREDY ANDRES POSADA PINEDA ', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3206681252', 'CM2-05', '0');
+INSERT INTO `hojas_vida` VALUES ('6455', '0', 'SAN DIEGO', '78029274', null, '1977-02-12', '2016-05-03', '0000-00-00', '0', '132', '369', '0', '31', '0', '208', '0', '1', '1', 'SANTIAGO JOSE DAZA PEÑATA', 'RECIBIDO POR IFICINA MOVIL-2 CISNEROS ', '1', '3218021039', 'CM2-06', '0');
+INSERT INTO `hojas_vida` VALUES ('6456', '0', 'VILLA LAURELES ', '1035389897', null, '1991-04-07', '2016-05-03', '0000-00-00', '0', '148', '324', '0', '31', '0', '209', '0', '1', '1', 'DIEGO ALEXANDER PEREZ CASTELLANOS', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3196050031', 'CM2-07', '0');
+INSERT INTO `hojas_vida` VALUES ('6457', '0', '', '1045112318', null, '1994-12-14', '2016-05-03', '0000-00-00', '0', '148', '337', '0', '31', '0', '209', '0', '1', '1', 'DANIEL ALEXIS OCHOA CORDOBA ', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3117689895', 'CM2-08', '0');
+INSERT INTO `hojas_vida` VALUES ('6458', '0', '', '10399692149', null, '1991-03-26', '2016-05-03', '0000-00-00', '0', '132', '369', '0', '31', '0', '208', '0', '1', '1', 'VICTOR ANIBAL HENAO TEJADA', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3208401537', 'CM2-09', '0');
+INSERT INTO `hojas_vida` VALUES ('6459', '0', '', '71171823', null, '1966-06-10', '2016-05-03', '0000-00-00', '0', '148', '315', '0', '31', '0', '209', '0', '1', '1', 'DAGOBERTO RODRIGUEZ ', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3137914117', 'CM2-10', '0');
+INSERT INTO `hojas_vida` VALUES ('6460', '0', '', '1035391756', '2016-05-03', '1997-02-19', '2016-05-03', '0000-00-00', '0', '132', '337', '0', '31', '0', '209', '0', '1', '1', 'DUVAN FERNEY OCHOA CORDOBA ', 'RECIBIDO POR OFCINA MOVIL-2 CISNEROS ', '1', '3207441803', 'CM2-11', '0');
+INSERT INTO `hojas_vida` VALUES ('6461', '0', '', '39187879', null, '1983-10-12', '2016-05-03', '0000-00-00', '0', '132', '316', '0', '31', '0', '210', '0', '1', '1', 'ERICA MARCELA CIFUENTES MARIN ', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3147728695', 'CM2-12', '0');
+INSERT INTO `hojas_vida` VALUES ('6462', '0', '', '1001738954', null, '1997-11-24', '2016-05-03', '0000-00-00', '0', '132', '311', '0', '31', '0', '208', '0', '1', '1', 'MAURICIO ESTIVEN ARBOLEDA DIAZ ', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', '3214979658', 'CM2-13', '0');
+INSERT INTO `hojas_vida` VALUES ('6463', '0', '', '92541658', '2016-05-03', '1981-06-17', '2016-05-03', '0000-00-00', '0', '148', '330', '0', '31', '0', '208', '0', '1', '1', 'AMAURIS JOSE RIOS ARROYO', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS ', '1', 'RIOS ARANGO', 'CM2-14', '0');
+INSERT INTO `hojas_vida` VALUES ('6464', '0', '', '1035390757', null, '1993-06-03', '2016-05-03', '0000-00-00', '0', '132', '323', '0', '31', '0', '208', '0', '1', '', 'FLOR ANGELA GIL ALVAREZ ', 'RECIBIDO POR OFICINA MOVIL-2 CISNEROS', '1', '3205243307 ', 'CM2-15', '0');
+INSERT INTO `hojas_vida` VALUES ('6465', '0', '', '10011389454', null, '1997-05-05', '2016-05-03', '0000-00-00', '0', '148', '323', '0', '31', '0', '208', '0', '1', '1', 'SEBASTIAN CASTAÑO MUÑOZ ', 'RECIBIDO POOFICINA MOVIL 2 CISNEROS ', '1', '3104953110', 'CM2-16', '0');
+INSERT INTO `hojas_vida` VALUES ('6466', '0', '', '43484081', null, '1984-09-26', '2016-05-03', '0000-00-00', '0', '148', '321', '0', '31', '0', '209', '0', '2', '1', 'ELIANA HORTENCIA VELASQUEZ VALENCIA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3218502518', 'CM2-17', '0');
+INSERT INTO `hojas_vida` VALUES ('6467', '0', '', '1035389789', null, '1990-10-29', '2016-05-03', '0000-00-00', '0', '132', '348', '0', '31', '0', '209', '0', '2', '', 'NORA CATALINA PUERTA RENDON ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3123969055', 'CM2-18', '0');
+INSERT INTO `hojas_vida` VALUES ('6468', '0', '', '1035389630', null, '1990-02-11', '2016-05-03', '0000-00-00', '0', '132', '348', '0', '31', '0', '209', '0', '2', '', 'DIANA MARIA CARDONA VERGARA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3213774637', 'CM2-19', '0');
+INSERT INTO `hojas_vida` VALUES ('6469', '0', '', '103538505', null, '1987-07-13', '2016-05-03', '0000-00-00', '0', '148', '324', '0', '31', '0', '209', '0', '1', '1', 'AMNDERSSON FARLEY BENAVIDES GARCIA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3136912803', 'CM2-20', '0');
+INSERT INTO `hojas_vida` VALUES ('6470', '0', 'SECTOR ARANZAZU CALLE 18# 18-13', '1035390159', null, '1991-12-06', null, '0000-00-00', '0', '141', '348', '0', '5', '0', '210', '0', '2', '', 'MARISOL BEDOYA RUA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3128173062-3117619968', 'C-74', '0');
+INSERT INTO `hojas_vida` VALUES ('6471', '0', 'SECTOR SAN JORGE', '71273168', null, '1981-12-08', null, '0000-00-00', '0', '132', '350', '0', '5', '0', '208', '0', '1', '', 'LISANDRO MUÑOZ RODRIGUEZ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3209140355', 'C-75', '0');
+INSERT INTO `hojas_vida` VALUES ('6472', '0', 'SECTOR LA CHAPOLA', '1044101018', null, '1991-02-14', null, '0000-00-00', '0', '132', '348', '0', '5', '0', '208', '0', '1', '', 'JOHN ALEJANDRO SUAREZ AGUDELO', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3194443311', 'C-76', '0');
+INSERT INTO `hojas_vida` VALUES ('6473', '0', '', '1004798794', null, '1986-05-30', null, '0000-00-00', '0', '148', '320', '0', '5', '0', '208', '0', '1', '', 'JOSE FABIAN GONZALEZ CASTAÑEDA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS ', '0', '3508189122', 'C-77', '0');
+INSERT INTO `hojas_vida` VALUES ('6474', '0', '', '71173699', null, '1975-05-20', null, '0000-00-00', '0', '148', '311', '0', '5', '0', '209', '0', '1', '', 'EDILSON ROBERTO SUAREZ SERNA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3127505155', 'C-78', '0');
+INSERT INTO `hojas_vida` VALUES ('6475', '0', '', '71186645', null, '1969-05-14', null, '0000-00-00', '0', '148', '313', '0', '5', '0', '209', '0', '1', '', 'MARCOS LISANDE CUERVO RENDON', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3216164892', 'C-79', '0');
+INSERT INTO `hojas_vida` VALUES ('6476', '0', '', '1035390038', null, '1991-09-03', '2016-05-04', '0000-00-00', '0', '132', '311', '0', '31', '0', '208', '0', '1', '1', 'WALTER ALONSO GOMEZ CORTES ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS', '1', '3183062564', 'CM2-21', '0');
+INSERT INTO `hojas_vida` VALUES ('6477', '0', '', '71171191', null, '1963-11-14', '2016-05-04', '0000-00-00', '0', '148', '326', '0', '31', '0', '208', '0', '1', '1', 'LUIS OCARIS VIDAL AGUDELO', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3116042572', 'CM2-21', '0');
+INSERT INTO `hojas_vida` VALUES ('6478', '0', '', '355197', null, '1982-04-22', '2016-05-04', '0000-00-00', '0', '132', '324', '0', '31', '0', '208', '0', '1', '1', 'NELSON ALEJANDRO ESCOBAR CASTRILLON ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3216186404', 'CM2-23', '0');
+INSERT INTO `hojas_vida` VALUES ('6479', '0', 'CARRERA DUQUE # 18-39', '1035391916', null, '1997-09-24', null, '0000-00-00', '0', '148', '314', '0', '5', '0', '209', '0', '1', '', 'YORMAN GOMEZ ALVAREZ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '8631819-3117524785-3127538439', 'C-80', '0');
+INSERT INTO `hojas_vida` VALUES ('6480', '0', '', '1035391052', null, '1994-10-07', '2016-05-04', '0000-00-00', '0', '148', '324', '0', '31', '0', '209', '0', '1', '1', 'JUAN GUILLERMO MARIN GOMEZ ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3146408104', 'CM2-24', '0');
+INSERT INTO `hojas_vida` VALUES ('6481', '0', '', '71173933', null, '1975-09-23', '2016-05-04', '0000-00-00', '0', '146', '348', '0', '31', '0', '208', '0', '1', '1', 'WILTON BERNARDO ALZATE MUÑOZ ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS', '1', '3148330573', 'CM2-25', '0');
+INSERT INTO `hojas_vida` VALUES ('6482', '0', '', '1035390003', null, '1991-06-10', '2016-05-04', '0000-00-00', '0', '129', '310', '0', '30', '0', '209', '0', '1', '', 'DARNOVER ALBERTO HERNANDEZ REYES', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3105130961', 'CM1-11', '0');
+INSERT INTO `hojas_vida` VALUES ('6483', '0', '', '71172540', null, '1969-04-27', '2016-05-04', '0000-00-00', '0', '129', '262', '0', '30', '0', '209', '0', '1', '', 'JESUS ARGIRO CASTRILLON VALENCIA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3207836815', 'CM1-12', '0');
+INSERT INTO `hojas_vida` VALUES ('6484', '0', 'BARRIO CALLE LA PAZ', '71173660', null, '1975-05-04', '2016-05-04', '0000-00-00', '0', '132', '348', '0', '30', '0', '208', '0', '1', '', 'FREDY ANTONIO MUÑOZ MUÑOZ ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3226858463', 'CM1-13', '0');
+INSERT INTO `hojas_vida` VALUES ('6485', '0', '', '71175150', null, '1984-03-21', '2016-05-04', '0000-00-00', '0', '132', '324', '0', '30', '0', '208', '0', '1', '', 'JULIAN ANDRES VELILLA RUIZ ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3106462796', 'CM1-14', '0');
+INSERT INTO `hojas_vida` VALUES ('6486', '0', '', '1020466435', null, '1995-03-01', '2016-05-04', '0000-00-00', '0', '148', '369', '0', '31', '0', '209', '0', '1', '1', 'DANIEL ESTEBAN ALZATE ZAPATA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3112590677', 'CM2-26', '0');
+INSERT INTO `hojas_vida` VALUES ('6487', '0', '', '1143966248', '2016-05-04', '1994-07-17', '2016-05-04', '0000-00-00', '0', '149', '324', '0', '30', '0', '208', '0', '1', '', 'EDWIN HERNAN ORTIZ CAICEDO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3146116417', 'CM1-15', '0');
+INSERT INTO `hojas_vida` VALUES ('6488', '0', '', '3912858', null, '1981-12-20', '2016-05-04', '0000-00-00', '0', '132', '308', '0', '31', '0', '207', '0', '2', '1', 'DIANA PATRICIA VIDAL DIAZ ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3128628263', 'CM2-27', '0');
+INSERT INTO `hojas_vida` VALUES ('6489', '0', '', '43483327', null, '1980-07-20', '2016-05-04', '0000-00-00', '0', '132', '330', '0', '30', '0', '209', '0', '2', '', 'GLORIA MARISELA QUINTANA CASTAÑO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3218784461', 'CM1-16', '0');
+INSERT INTO `hojas_vida` VALUES ('6490', '0', 'CRA. 9 # 20-28', '43483238', null, '1972-10-22', '2016-05-04', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '2', '', 'MARTHA LIA ESTRADA JARAMILLO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3128932773', 'CM1-17', '0');
+INSERT INTO `hojas_vida` VALUES ('6491', '0', 'CRA. 82D #20B-27 BELÉN ALTA VISTA', '1035391874', null, '1997-08-17', '2016-05-04', '0000-00-00', '0', '132', '349', '0', '30', '0', '209', '0', '2', '', 'VALENTINA JARAMILLO MEDINA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3017139314', 'CM1-18', '0');
+INSERT INTO `hojas_vida` VALUES ('6492', '0', 'BARRIO EL CARRETEABLE', '1035390101', null, '1990-06-07', '2016-05-04', '0000-00-00', '0', '132', '348', '0', '30', '0', '210', '0', '1', '', 'EDWARD ANDRES ISAZA MUÑOZ', '', '1', '3105444665', 'CM1-19', '0');
+INSERT INTO `hojas_vida` VALUES ('6493', '0', 'CRA. 13B #21 16', '8401351', null, '1955-01-27', '2016-05-04', '0000-00-00', '0', '132', '323', '0', '30', '0', '209', '0', '1', '', 'JESUS ADAN GARCIA MORALES ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3128937413', 'CM1-20', '0');
+INSERT INTO `hojas_vida` VALUES ('6494', '0', '', '1035390310', null, '1992-07-02', '2016-05-04', '0000-00-00', '0', '132', '309', '0', '30', '0', '209', '0', '2', '', 'DANIELA KATERIN MELGUIZO CALDERON ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3122524204', 'CM1-21', '0');
+INSERT INTO `hojas_vida` VALUES ('6495', '0', '', '71174300', null, '1972-06-23', '2016-05-04', '0000-00-00', '0', '132', '324', '0', '30', '0', '208', '0', '1', '', 'RUBEN DARIO GARCIA ARIAS ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3118144302', 'CM1-22', '0');
+INSERT INTO `hojas_vida` VALUES ('6496', '0', '', '71985988', null, '1977-06-27', '2016-05-04', '0000-00-00', '0', '132', '324', '0', '30', '0', '208', '0', '1', '', 'LUIS FELIPE HERNANDEZ MARTINEZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3217053421', 'CM1-23', '0');
+INSERT INTO `hojas_vida` VALUES ('6497', '0', '', '1035390864', null, '1993-09-12', '2016-05-04', '0000-00-00', '0', '132', '317', '0', '30', '0', '209', '0', '2', '', 'MARIBEL GALLEGO HENAO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3137189292', 'CM1-24', '0');
+INSERT INTO `hojas_vida` VALUES ('6498', '0', '', '1035391511', null, '1996-06-09', '2016-05-04', '0000-00-00', '0', '132', '323', '0', '30', '0', '209', '0', '1', '', 'SEBASTIAN ALEJANDRO OSORIO ZAPATA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3107123716', 'CM1-25', '0');
+INSERT INTO `hojas_vida` VALUES ('6499', '0', 'BARRIO VILLA NELLY', '1045111359', null, '1993-03-08', '2016-05-04', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '1', '', 'OSCAR FERNANDO HERRERA IBARRA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3206455277', 'CM1-26', '0');
+INSERT INTO `hojas_vida` VALUES ('6500', '0', 'CALLE NARIÑO #20-40', '1035391446', null, '1996-03-21', '2016-05-04', '0000-00-00', '0', '154', '348', '0', '30', '0', '209', '0', '1', '', 'GABRIEL GARCIA SUAREZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3208019807', 'CM1-27', '0');
+INSERT INTO `hojas_vida` VALUES ('6501', '0', 'BARRIO PÉNJAMO', '70140258', null, '1978-09-08', '2016-05-04', '0000-00-00', '0', '129', '348', '0', '30', '0', '209', '0', '1', '', 'JUAN CARLOS AGUDELO GARCIA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3225855915', 'CM1-28', '0');
+INSERT INTO `hojas_vida` VALUES ('6502', '0', 'BARRIO LA CHAPOLA', '71175111', null, '1983-12-09', '2016-05-04', '0000-00-00', '0', '148', '348', '0', '30', '0', '208', '0', '1', '', 'JHON ALEXANDER OSORIO AGUDELO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3147874436', 'CM1-29', '0');
+INSERT INTO `hojas_vida` VALUES ('6503', '0', '', '1001389976', '2016-05-05', '1997-11-10', '2016-05-04', '0000-00-00', '0', '132', '310', '0', '30', '0', '209', '0', '1', '', 'HERNAN DAVID ISAZA BEDOYA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3117663624', 'CM1-30', '0');
+INSERT INTO `hojas_vida` VALUES ('6504', '0', '', '1035389785', null, '1991-01-29', '2016-05-05', '0000-00-00', '0', '148', '310', '0', '31', '0', '209', '0', '1', '1', 'FERNEY ALEXANDER TABORDA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3214224267', 'CM2-28', '0');
+INSERT INTO `hojas_vida` VALUES ('6505', '0', '', '1035389136', null, '1989-03-03', '2016-05-05', '0000-00-00', '0', '132', '324', '0', '31', '0', '209', '0', '2', '1', 'ERIKA MILENA RUIZ BETANCUR', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3124902587', 'CM2-29', '0');
+INSERT INTO `hojas_vida` VALUES ('6506', '0', '', '71451764', null, '1976-01-24', '2016-05-05', '0000-00-00', '0', '148', '438', '0', '31', '0', '207', '0', '1', '1', 'FABER NOLBERTO MONTOYA MONTOYA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3127784464', 'CM2-30', '0');
+INSERT INTO `hojas_vida` VALUES ('6507', '0', '', '98506674', null, '1978-09-02', '2016-05-05', '0000-00-00', '0', '148', '315', '0', '30', '0', '209', '0', '1', '', 'WILLIAM ALONZO GOMEZ CORTES', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3147613388', 'CM1-31', '0');
+INSERT INTO `hojas_vida` VALUES ('6508', '0', '', '71170875', null, '1960-03-12', '2016-05-05', '0000-00-00', '0', '148', '286', '0', '30', '0', '208', '0', '1', '', 'MARCO TULIO SUAREZ MONSALVE', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3192646409', 'CM1-32', '0');
+INSERT INTO `hojas_vida` VALUES ('6509', '0', 'BARRIO CALLE BERRIO', '1001389413', null, '1994-03-03', '2016-05-05', '0000-00-00', '0', '157', '348', '0', '30', '0', '209', '0', '1', '', 'JHONNY ARBEY PARRA FLOREZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3114033786', 'CM1-33', '0');
+INSERT INTO `hojas_vida` VALUES ('6510', '0', 'CALLE BOLIVAR', '71170649', null, '1961-09-10', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '31', '0', '208', '0', '1', '1', 'JORGE LEONARNO VIVERES SOSSA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3158009994', 'CM2-31', '0');
+INSERT INTO `hojas_vida` VALUES ('6511', '0', 'CL. 19 #23-74', '1035390877', null, '1994-01-16', '2016-05-05', '0000-00-00', '0', '148', '322', '0', '30', '0', '207', '0', '1', '', 'OSCAR ALEXIS BUSTAMANTE MUÑOZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3127425464', 'CM1-34', '0');
+INSERT INTO `hojas_vida` VALUES ('6512', '0', '', '22028100', null, '1960-04-12', '2016-05-05', '0000-00-00', '0', '132', '316', '0', '31', '0', '208', '0', '1', '1', 'LUZ MARINA GARCIA HERNANDEZ ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3206239454', 'CM2-32', '0');
+INSERT INTO `hojas_vida` VALUES ('6513', '0', 'BARRIO VILLA NELLY', '71175391', null, '1980-02-08', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '30', '0', '209', '0', '1', '', 'FRANCISCO JAVIER ECHEVERRY FRANCO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3207826142', 'CM1-35', '0');
+INSERT INTO `hojas_vida` VALUES ('6514', '0', 'EL ZARZAL', '1035391839', null, '1997-03-06', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '31', '0', '208', '0', '1', '1', 'JUAN DAVID GAVIRIAN JARAMILLO', 'RECIBIDOPOR OFICINA MOVIL 2 CISNEROS ', '1', '3148404252', 'CM2-33', '0');
+INSERT INTO `hojas_vida` VALUES ('6515', '0', '', '71170424', null, '1961-01-29', '2016-05-05', '0000-00-00', '0', '132', '316', '0', '30', '0', '208', '0', '1', '', 'HENRY DE JESUS BUSTAMANTE', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3128167982', 'CM1-36', '0');
+INSERT INTO `hojas_vida` VALUES ('6516', '0', '', '71174570', null, '1980-10-14', '2016-05-05', '0000-00-00', '0', '132', '334', '0', '31', '0', '209', '0', '1', '1', 'MARCOS ANTONIO BARRERA MONTOYA ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3148519680', 'CM2-34', '0');
+INSERT INTO `hojas_vida` VALUES ('6517', '0', 'CL. 19 #23-74', '1035391713', null, '1996-12-02', '2016-05-05', '0000-00-00', '0', '0', '348', '0', '30', '0', '0', '0', '1', '', 'DIEGO FERNANDO MUÑOZ HENAO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3107316839', 'CM1-37', '0');
+INSERT INTO `hojas_vida` VALUES ('6518', '0', '', '22069641', null, '1968-12-23', '2016-05-05', '0000-00-00', '0', '132', '315', '0', '30', '0', '208', '0', '2', '', 'SOR MELIDA AGUDELO CATAÑO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3113543232', 'CM1-38', '0');
+INSERT INTO `hojas_vida` VALUES ('6519', '0', '', '71171430', null, '1964-04-30', '2016-05-05', '0000-00-00', '0', '148', '262', '0', '31', '0', '208', '0', '1', '1', 'RODRIGO ANTONIO GARCIA GOMEZ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS  ', '1', '3117918569', 'CM2-35', '0');
+INSERT INTO `hojas_vida` VALUES ('6520', '0', '', '22034026', null, '1965-06-19', '2016-05-05', '0000-00-00', '0', '132', '308', '0', '30', '0', '209', '0', '2', '', 'MARTHA LUCIA RUA DUQUE ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3107248100', 'CM1-39', '0');
+INSERT INTO `hojas_vida` VALUES ('6521', '0', 'CRA. 8B #20-42', '1015998070', null, '1986-09-01', '2016-05-05', '0000-00-00', '0', '148', '324', '0', '30', '0', '208', '0', '1', '', 'FABIO ALEXANDER VANEGAS PORRAS', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3103752428', 'CM1-40', '0');
+INSERT INTO `hojas_vida` VALUES ('6522', '0', 'BARRIO NUEVO', '1017197096', null, '1991-06-11', '2016-05-05', '0000-00-00', '0', '148', '369', '0', '31', '0', '208', '0', '1', '1', 'ARBEY ALEJANDRO FLOREZ RINCON  ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3206762482', 'CM2-36', '0');
+INSERT INTO `hojas_vida` VALUES ('6523', '0', '', '98472658', null, '1975-12-05', '2016-05-05', '0000-00-00', '0', '148', '412', '0', '31', '0', '208', '0', '1', '1', 'DIEGO FERNANDO MEJIA GUERRA ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3135615061', 'CM2-37', '0');
+INSERT INTO `hojas_vida` VALUES ('6524', '0', 'BARRIO NUEVO', '1042773598', null, '1994-10-19', '2016-05-05', '0000-00-00', '0', '132', '369', '0', '31', '0', '209', '0', '1', '1', 'ANDRES NEFTALI  FLOREZ ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3136966569', 'CM2-38', '0');
+INSERT INTO `hojas_vida` VALUES ('6525', '0', '', '43483523', null, '1981-09-26', '2016-05-05', '0000-00-00', '0', '132', '324', '0', '31', '0', '209', '0', '2', '1', 'LILIANA PATRICIA SOSA ISAZA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3128253697', 'CM2-39', '0');
+INSERT INTO `hojas_vida` VALUES ('6526', '0', 'BARRIO EL UNO ', '1035389028', null, '1985-10-19', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '31', '0', '208', '0', '1', '1', 'JUAN GUILLERMO DELGADO VALENCIA ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3113936627', 'CM2-40', '0');
+INSERT INTO `hojas_vida` VALUES ('6527', '0', '', '71174161', null, '1977-06-29', '2016-05-05', '0000-00-00', '0', '132', '333', '0', '30', '0', '208', '0', '1', '', 'JHOBANI ALBERTO DELGADO VALENCIA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3207453411', 'CM1-41', '0');
+INSERT INTO `hojas_vida` VALUES ('6528', '0', 'BARRIO CALLE LA PAZ', '1035388077', null, '1986-04-25', '2016-05-05', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '2', '', 'SANDRA MILENA SOSA RODAS ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3104115614', 'CM1-42', '0');
+INSERT INTO `hojas_vida` VALUES ('6529', '0', 'CL. 19 #88A 19 BELÉN ', '1035388920', null, '1988-10-12', '2016-05-05', '0000-00-00', '0', '133', '349', '0', '30', '0', '209', '0', '2', '', 'LUISA FERNANDA MIRANDA HENAO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3136268365', 'CM1-43', '0');
+INSERT INTO `hojas_vida` VALUES ('6530', '0', 'BARRIO CALLE COLÓN', '1035392014', null, '1998-02-09', '2016-05-05', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '2', '', 'VALERIA JARAMILLO BURITICA ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3103727851', 'CM1-44', '0');
+INSERT INTO `hojas_vida` VALUES ('6531', '0', '', '43483072', null, '1978-08-27', '2016-05-05', '0000-00-00', '0', '132', '323', '0', '30', '0', '210', '0', '2', '', 'SANDRA JANETH CARDONA CALDERON', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3122885376', 'CM1-45', '0');
+INSERT INTO `hojas_vida` VALUES ('6532', '0', 'SANTA CRUZ', '48470293', null, '1964-01-19', '2016-05-05', '0000-00-00', '0', '148', '349', '0', '30', '0', '207', '0', '1', '', 'JOHN JAIRO FRANCO VAHOS ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3117212712', 'CM1-46', '0');
+INSERT INTO `hojas_vida` VALUES ('6533', '0', 'BARRIO CARRERA BOLIVAR', '1035389553', null, '1989-10-30', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '30', '0', '209', '0', '1', '', 'CRISTIAN JAVIER MUNERA CATAÑO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3209206797', 'CM1-47', '0');
+INSERT INTO `hojas_vida` VALUES ('6534', '0', '', '1035391375', null, '1995-12-14', '2016-05-05', '0000-00-00', '0', '148', '284', '0', '30', '0', '209', '0', '1', '', 'JUAN CAMILO SIERRA PUERTA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3192646481', 'CM1-48', '0');
+INSERT INTO `hojas_vida` VALUES ('6535', '0', 'CR. 24 # 18-39', '71174557', null, '1980-03-17', '2016-05-05', '0000-00-00', '0', '148', '315', '0', '30', '0', '209', '0', '1', '', 'NELSON DE JESUS MESA MARTINEZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3225515517', 'CM1-49', '0');
+INSERT INTO `hojas_vida` VALUES ('6536', '0', 'BARRIO SAN DIEGO ', '15483894', null, '1964-09-14', '2016-05-05', '0000-00-00', '0', '148', '369', '0', '30', '0', '207', '0', '1', '', 'LUIS ANGEL ARANGO PINEDA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3117322224', 'CM1-50', '0');
+INSERT INTO `hojas_vida` VALUES ('6537', '0', '', '71171302', null, '1964-04-14', null, '0000-00-00', '0', '148', '320', '0', '5', '0', '208', '0', '1', '', 'OCTAVIO DE JESUS LONDOÑO PARRA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3102702141', 'C-81', '0');
+INSERT INTO `hojas_vida` VALUES ('6538', '0', 'CARRERA BOLIVAR # 20-57', '1035388652', null, '1988-02-06', null, '0000-00-00', '0', '146', '348', '0', '5', '0', '209', '0', '1', '', 'JULIAN CAMILO MENDOZA LOPEZ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3104272902', 'C-82', '0');
+INSERT INTO `hojas_vida` VALUES ('6539', '0', 'CALLE 21 # 21-137', '71174678', '2016-05-05', '1981-08-07', null, '0000-00-00', '0', '159', '348', '0', '5', '0', '210', '0', '1', '', 'MANUEL ANTONIO HURTADO CANO', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3207401570-3144287924', 'C-83', '0');
+INSERT INTO `hojas_vida` VALUES ('6540', '0', '', '1035391680', null, '1996-10-30', null, '0000-00-00', '0', '149', '348', '0', '5', '0', '210', '0', '1', '', 'YEISON ANDRES CASTAÑO ECHEVERRY', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3218494640', 'C-84', '0');
+INSERT INTO `hojas_vida` VALUES ('6541', '0', '', '1035390554', null, '1994-03-27', '2016-05-05', '0000-00-00', '0', '132', '323', '0', '31', '0', '209', '0', '1', '1', 'WILLINGTON ANTONIO ZAPATA CUARTAS', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS', '1', '3205038065', 'CM2-41', '0');
+INSERT INTO `hojas_vida` VALUES ('6542', '0', 'DIAGONAL 62#39 A-08', '71175260', null, '1984-10-30', null, '0000-00-00', '0', '0', '348', '0', '5', '0', '0', '0', '1', '', 'HECTOR MAURICIO CHAVARRIA GUZMAN', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3137510803', 'C-85', '0');
+INSERT INTO `hojas_vida` VALUES ('6543', '0', '', '1037370389', null, '1998-01-16', '2016-05-05', '0000-00-00', '0', '132', '436', '0', '31', '0', '209', '0', '2', '1', 'DANIELA PATRICIA GONZALEZ CORREA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS', '1', '3187042946', 'CM2-42', '0');
+INSERT INTO `hojas_vida` VALUES ('6544', '0', '', '3552151', null, '1982-01-26', null, '0000-00-00', '0', '148', '411', '0', '5', '0', '208', '0', '1', '', 'MAURICIO ALBERTO ALVAREZ HENAO', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3126816428', 'C-86', '0');
+INSERT INTO `hojas_vida` VALUES ('6545', '0', '', '1035388542', null, '1987-08-23', '2016-05-05', '0000-00-00', '0', '132', '313', '0', '30', '0', '209', '0', '2', '', 'MARYLIN JHOANA BUITRAGO ZAPATA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3127653827', 'CM1-51', '0');
+INSERT INTO `hojas_vida` VALUES ('6546', '0', 'CALLE 1 # 12-48 SECTOR JUAN XXIII', '3589098', null, '1962-06-01', null, '0000-00-00', '0', '0', '369', '0', '5', '0', '0', '0', '1', '', 'PEDRO LUIS MEDINA RUA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3215902192', 'C-87', '0');
+INSERT INTO `hojas_vida` VALUES ('6547', '0', '', '22041876', null, '1984-01-13', '2016-05-05', '0000-00-00', '0', '132', '411', '0', '31', '0', '208', '0', '1', '', 'OLINDA NOEMY CASTRILLON SALAZAR', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3137199013', 'CM2-43', '0');
+INSERT INTO `hojas_vida` VALUES ('6548', '0', 'LOS LAURELES', '71175350', null, '1984-01-01', '2016-05-05', '0000-00-00', '0', '148', '369', '0', '30', '0', '209', '0', '1', '', 'SANDRO LEON GALVIS OSORIO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3148806954', 'CM1-52', '0');
+INSERT INTO `hojas_vida` VALUES ('6549', '0', '', '1035388914', null, '1988-12-12', '2016-05-05', '0000-00-00', '0', '132', '323', '0', '31', '0', '208', '0', '1', '', 'ILDER ALONSO PARRA', 'RECIBIDO POR OFICINA MOVIL 2 CISNERO ', '1', '3122133687', 'CM2-44', '0');
+INSERT INTO `hojas_vida` VALUES ('6550', '0', 'BARRIO NUEVO', '98484511', null, '1977-05-10', '2016-05-05', '0000-00-00', '0', '132', '369', '0', '30', '0', '208', '0', '1', '', 'LEONARDO DE JESUS OSORIO GARCIA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3107965431', 'CM1-53', '0');
+INSERT INTO `hojas_vida` VALUES ('6551', '0', '', '6210283', null, '1957-01-29', '2016-05-05', '0000-00-00', '0', '148', '286', '0', '30', '0', '207', '0', '1', '', 'WILLIAM CIFUENTES', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3106821810', 'CM1-54', '0');
+INSERT INTO `hojas_vida` VALUES ('6552', '0', '', '1040364143', null, '1990-11-24', null, '0000-00-00', '0', '148', '350', '0', '5', '0', '208', '0', '1', '', 'YERMIS ENRRIQUE NARVAEZ GAMARRA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3113216173', 'C-88', '0');
+INSERT INTO `hojas_vida` VALUES ('6553', '0', 'BARRIO VILLA NELLY', '1035390547', null, '1993-03-03', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '30', '0', '209', '0', '1', '', 'JUAN DAVID QUINTERO FRANCO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3126899811', 'CM1-55', '0');
+INSERT INTO `hojas_vida` VALUES ('6554', '0', '', '43483256', null, '1980-01-28', '2016-05-05', '0000-00-00', '0', '132', '323', '0', '31', '0', '209', '0', '2', '', 'MARY LUZ RUIZ BETANCUR ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3147753935', 'CM2-45', '0');
+INSERT INTO `hojas_vida` VALUES ('6555', '0', '', '71173592', null, '1974-10-28', '2016-05-05', '0000-00-00', '0', '148', '262', '0', '30', '0', '209', '0', '1', '', 'LUIS CARLOS HENAO BERRIO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3116327396', 'CM1-56', '0');
+INSERT INTO `hojas_vida` VALUES ('6556', '0', 'BARRIO VILLA NELLY', '3551907', null, '1982-04-21', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '30', '0', '208', '0', '1', '', 'NELSON ALEJANDRO ESCOBAR CASTRILLON', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3216186404', 'CM1-57', '0');
+INSERT INTO `hojas_vida` VALUES ('6557', '0', 'BARRIO VILLA NELLY', '1035390187', null, '1991-10-16', '2016-05-05', '0000-00-00', '0', '132', '348', '0', '30', '0', '208', '0', '1', '', 'YEISON ALONSO GONZALEZ PARRA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3116372262', 'CM1-58', '0');
+INSERT INTO `hojas_vida` VALUES ('6558', '0', '', '71171880', null, '1966-08-01', '2016-05-05', '0000-00-00', '0', '132', '262', '0', '31', '0', '208', '0', '1', '', 'FABIO ANIBAL GARCIA VANEGAS ', 'RECIBIDO POR OFICINA MOVIL2 CISNEROS ', '1', '3134316854', 'CM2-46', '0');
+INSERT INTO `hojas_vida` VALUES ('6559', '0', 'CL. 19 # 23-74', '1035389821', null, '1990-11-23', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '30', '0', '209', '0', '1', '', 'DANIEL ALFONSO MUÑOZ HENAO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3128174976', 'CM1-59', '0');
+INSERT INTO `hojas_vida` VALUES ('6560', '0', '', '1035388558', null, '1987-04-25', '2016-05-05', '0000-00-00', '0', '148', '315', '0', '30', '0', '209', '0', '1', '', 'YORMAN FERNEY VAENCIA MEJIA ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3116488388', 'CM1-60', '0');
+INSERT INTO `hojas_vida` VALUES ('6561', '0', '', '21653693', null, '1975-05-23', '2016-05-05', '0000-00-00', '0', '132', '330', '0', '31', '0', '208', '0', '2', '', 'DIANA PATRICIA QUINTANA ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3128388612', 'CM2-47', '0');
+INSERT INTO `hojas_vida` VALUES ('6562', '0', 'CL. 19A #23-47', '1035389234', null, '1989-05-25', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '30', '0', '209', '0', '1', '', 'ANGEL ANDRES PEREZ PEREZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3108392311', 'CM1-61', '0');
+INSERT INTO `hojas_vida` VALUES ('6563', '0', 'LA ESPERANZA ', '3589646', null, '1975-05-23', '2016-05-05', '0000-00-00', '0', '148', '350', '0', '31', '0', '207', '0', '1', '1', 'JOSE ALBERTO GALEANO FORONDA', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3205949019', 'CM2-48', '0');
+INSERT INTO `hojas_vida` VALUES ('6564', '0', '', '1035389520', null, '1990-02-13', '2016-05-05', '0000-00-00', '0', '148', '315', '0', '30', '0', '209', '0', '1', '', 'ANDERSON YAIR HERRERA JARAMILLO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3127047397', 'CM1-62', '0');
+INSERT INTO `hojas_vida` VALUES ('6565', '0', '', '71172660', null, '1969-10-01', '2016-05-05', '0000-00-00', '0', '132', '317', '0', '30', '0', '209', '0', '1', '', 'CARLOS MARIO ISAZA CARDONA ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3209673747', 'CM1-63', '0');
+INSERT INTO `hojas_vida` VALUES ('6566', '0', 'BARRIO BUENOS AIRES', '1020448441', null, '1995-12-20', '2016-05-05', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '1', '', 'SEBASTIAN CAMILO HURTADO SALDARRIAGA', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3128700926', 'CM1-64', '0');
+INSERT INTO `hojas_vida` VALUES ('6567', '0', '', '1035391758', null, '1997-03-07', '2016-05-05', '0000-00-00', '0', '132', '311', '0', '31', '0', '208', '0', '1', '1', 'SIMON FELIPE VERGARA ARCILA ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS ', '1', '3127806933', 'CM2-49', '0');
+INSERT INTO `hojas_vida` VALUES ('6568', '0', '', '1001499904', null, '1994-04-13', '2016-05-05', '0000-00-00', '0', '132', '423', '0', '30', '0', '209', '0', '2', '', 'SANDRA LORENA RIOS BUSTAMANTE', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3145879160', 'CM1-65', '0');
+INSERT INTO `hojas_vida` VALUES ('6569', '0', 'BARRIO VILLA NELLY', '1102803862', null, '1986-10-25', '2016-05-05', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '1', '', 'JORGE LUIS MELENDREZ MARQUEZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3205895095', 'CM1-66', '0');
+INSERT INTO `hojas_vida` VALUES ('6570', '0', 'BARRIO SAN DIEGO', '1038063934', null, '1996-12-04', '2016-05-05', '0000-00-00', '0', '132', '423', '0', '30', '0', '209', '0', '2', '', 'YENIFER NATALIA HENAO OSORIO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3148479704', 'CM1-67', '0');
+INSERT INTO `hojas_vida` VALUES ('6571', '0', '', '1035390496', null, '1992-12-29', '2016-05-05', '0000-00-00', '0', '148', '262', '0', '31', '0', '209', '0', '1', '1', 'ADRIAN RIOS RIOS CORDOBA ', 'RECIBIDO POR OFICINA MOVIL 2 CISNEROS', '1', '3117397122', 'CM2-50', '0');
+INSERT INTO `hojas_vida` VALUES ('6572', '0', 'LOS ALMENDROS', '1037500384', null, '1988-06-13', '2016-05-05', '0000-00-00', '0', '132', '423', '0', '30', '0', '209', '0', '2', '', 'VANESSA JIMENEZ DUQUE', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3135656555', 'CM1-68', '0');
+INSERT INTO `hojas_vida` VALUES ('6573', '0', '', '1035388401', null, '1986-12-31', '2016-05-05', '0000-00-00', '0', '148', '313', '0', '30', '0', '208', '0', '1', '', 'ADRIAN FELIPE ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', 'OROZCO LUJAN ', 'CM1-69', '0');
+INSERT INTO `hojas_vida` VALUES ('6574', '0', 'CALLE DEL HOSPITAL ', '71171293', null, '1964-04-29', '2016-05-05', '0000-00-00', '0', '132', '348', '0', '30', '0', '209', '0', '1', '', 'WILLIAM ADRIAN LOPERA LONDOÑO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3117171150', 'CM1-70', '0');
+INSERT INTO `hojas_vida` VALUES ('6575', '0', 'BARRIO BUENOS AIRES', '1001738477', null, '1996-04-29', '2016-05-05', '0000-00-00', '0', '148', '348', '0', '30', '0', '208', '0', '1', '', 'LUIS DAVID GALLEGO CATAÑO', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3116080369', 'CM1-71', '0');
+INSERT INTO `hojas_vida` VALUES ('6576', '0', 'LOS ALMENDROS', '1035389976', null, '1991-07-13', '2016-05-05', '0000-00-00', '0', '132', '423', '0', '30', '0', '209', '0', '1', '', 'MAURICIO SIERRA CARVAJAL ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3226114895', 'CM1-72', '0');
+INSERT INTO `hojas_vida` VALUES ('6577', '0', '', '1039684883', null, '1988-06-12', '2016-05-05', '0000-00-00', '0', '148', '320', '0', '30', '0', '208', '0', '1', '', 'NELSON ENRIQUE VIDAL DIAZ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3113440921', 'CM1-73', '0');
+INSERT INTO `hojas_vida` VALUES ('6578', '0', 'BARRIO SAN DIEGO', '71172666', null, '1969-06-04', '2016-05-05', '0000-00-00', '0', '148', '423', '0', '30', '0', '208', '0', '1', '', 'CARLOS MARIO OSPINA HENAO ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3142331736', 'CM1-74', '0');
+INSERT INTO `hojas_vida` VALUES ('6579', '0', '', '1035390241', null, '1979-06-12', null, '0000-00-00', '0', '132', '333', '0', '5', '0', '207', '0', '1', '', 'RODRIGO ALBERTO RODRIGUEZ MONSALVE', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3205679029', 'C-89', '0');
+INSERT INTO `hojas_vida` VALUES ('6580', '0', '', '1035391180', null, '1995-03-12', '2016-05-05', '0000-00-00', '0', '132', '330', '0', '30', '0', '208', '0', '1', '', 'DAVID DIAZ SERNA ', 'RECIBIDO POR OFICINA MÓVIL 1 CISNEROS', '1', '3154388151', 'CM1-75', '0');
+INSERT INTO `hojas_vida` VALUES ('6581', '0', 'LA FLORESTA', '1045426094', null, '1988-08-29', null, '0000-00-00', '0', '132', '370', '0', '5', '0', '0', '0', '1', '', 'LUIS MARIO PACHECO MARTINEZ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3203982419', 'C-90', '0');
+INSERT INTO `hojas_vida` VALUES ('6582', '0', 'PROVIDENCIA', '98470669', null, '1996-07-20', null, '0000-00-00', '0', '132', '350', '0', '5', '0', '209', '0', '1', '', 'ELKIN ROGELIO QUIROZ RAIGOZA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3113474439', 'C-91', '0');
+INSERT INTO `hojas_vida` VALUES ('6583', '0', '', '71171879', null, '1966-07-21', null, '0000-00-00', '0', '148', '310', '0', '5', '0', '208', '0', '1', '', 'ENRIQUE ALBEIRO ZULETA RESTREPO', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3113713189', 'C-92', '0');
+INSERT INTO `hojas_vida` VALUES ('6584', '0', '', '70256517', null, '1979-05-14', null, '0000-00-00', '0', '132', '330', '0', '5', '0', '208', '0', '1', '', 'ADRIAN ALBERTO GAVIRIA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3116059775', 'C-93', '0');
+INSERT INTO `hojas_vida` VALUES ('6585', '0', '', '71173827', null, '1975-09-16', null, '0000-00-00', '0', '148', '324', '0', '5', '0', '208', '0', '1', '', 'ROBINSON DE JESUS MEJIA DIOSA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3193479970', 'C-94', '0');
+INSERT INTO `hojas_vida` VALUES ('6586', '0', 'CALLE COLON', '1035390444', null, '1992-11-11', null, '0000-00-00', '0', '146', '348', '0', '5', '0', '208', '0', '1', '', 'DANILO SALAZAR GOMEZ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3196472518-3113727404', 'C-95', '0');
+INSERT INTO `hojas_vida` VALUES ('6587', '0', 'BUENOS AIRES', '1035390670', null, '1993-05-03', null, '0000-00-00', '0', '132', '348', '0', '5', '0', '207', '0', '1', '', 'JOSE LUIS MEJIA PIEDRAHITA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3146458366', 'C-96', '0');
+INSERT INTO `hojas_vida` VALUES ('6588', '0', 'PROVIDENCIA, SECTOR ALBERTO URIBE', '1010089091', null, '1995-07-20', null, '0000-00-00', '0', '0', '350', '0', '5', '0', '0', '0', '1', '', 'FERNANDO ANTONIO CARDENAS MARIN', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3113627281', 'C-97', '0');
+INSERT INTO `hojas_vida` VALUES ('6589', '0', '', '71171033', null, '1963-05-03', null, '0000-00-00', '0', '148', '321', '0', '5', '0', '208', '0', '1', '', 'ELKIN ANTONIO MONSALVE CASTRO', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3115537809', 'C-98', '0');
+INSERT INTO `hojas_vida` VALUES ('6590', '0', '', '98506994', null, '1980-09-26', null, '0000-00-00', '0', '148', '261', '0', '5', '0', '207', '0', '1', '', 'JUAN DAVID RAMIREZ OSSA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3105428115', 'C-99', '0');
+INSERT INTO `hojas_vida` VALUES ('6591', '0', '', '71173107', null, '1967-01-01', null, '0000-00-00', '0', '148', '261', '0', '5', '0', '209', '0', '1', '', 'CARLOS ARTURO AGUIRRE AGUDELO', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS ', '0', '3113182974', 'C-100', '0');
+INSERT INTO `hojas_vida` VALUES ('6592', '0', '', '71171296', null, '1964-06-03', null, '0000-00-00', '0', '148', '261', '0', '5', '0', '209', '0', '1', '', 'WILLIAM DE JESUS POSADA PUERTA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3136934272', 'C-101', '0');
+INSERT INTO `hojas_vida` VALUES ('6593', '0', '', '3605101', null, '1950-09-01', null, '0000-00-00', '0', '148', '261', '0', '5', '0', '208', '0', '1', '', 'ANDRES AVELINO ECHAVARRIA VALENCIA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3203228872', 'C-102', '0');
+INSERT INTO `hojas_vida` VALUES ('6594', '0', '', '71183730', null, '1964-02-13', null, '0000-00-00', '0', '148', '261', '0', '5', '0', '208', '0', '1', '', 'DANIEL ALBERTO LOAIZA MADRIGAL ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3136875915', 'C-103', '0');
+INSERT INTO `hojas_vida` VALUES ('6595', '0', 'VILLA NELLY', '71905884', null, '1976-04-26', null, '0000-00-00', '0', '132', '348', '0', '5', '0', '208', '0', '1', '', 'RICARDO ARTURO GONZALES VILLEGAS', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3217861804', 'C-104', '0');
+INSERT INTO `hojas_vida` VALUES ('6596', '0', '# 23 A 28', '1039758473', null, '1987-04-02', null, '0000-00-00', '0', '148', '315', '0', '5', '0', '209', '0', '1', '', 'CARLOS ANDRES OSORIO VELASQUEZ', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3205164822', 'C-105', '0');
+INSERT INTO `hojas_vida` VALUES ('6597', '0', '', '71175484', null, '1986-02-08', null, '0000-00-00', '0', '132', '311', '0', '5', '0', '208', '0', '1', '', 'FABIO NELSON MUÑOZ CALDERON', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3044771124', 'C-106', '0');
+INSERT INTO `hojas_vida` VALUES ('6598', '0', 'FLORESTA', '8432294', null, '1980-11-25', null, '0000-00-00', '0', '131', '370', '0', '5', '0', '209', '0', '1', '', 'JEISON RODRIGO ISAZA CALDERA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3105959295', 'C-107', '0');
+INSERT INTO `hojas_vida` VALUES ('6599', '0', 'PROVIDENCIA LA Y', '43756518', '2016-05-06', '1977-04-13', null, '0000-00-00', '0', '132', '350', '0', '5', '0', '210', '221', '2', '', 'MARIA ELENA AGUIRRE SALDARRIAGA', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3108206474', 'C-108', '0');
+INSERT INTO `hojas_vida` VALUES ('6600', '0', 'TRASVERSAL ', '1035231045', '2016-05-06', '1995-06-17', null, '0000-00-00', '0', '157', '348', '0', '5', '0', '209', '0', '1', '', 'CAMILO ANDRES HERNANDEZ PINO', 'RECIBIDA POR LA OFICINA FIJA DE CISNEROS', '0', '3117828664', 'C-109', '0');
 
 -- ----------------------------
 -- Table structure for hojas_vida_archivos
@@ -655,7 +1190,7 @@ CREATE TABLE `hojas_vida_archivos` (
   KEY `Fk_Id_Hoja_Vida_Subcategoria` (`Fk_Id_Hoja_Vida_Subcategoria`),
   KEY `Fk_Id_Hoja_Vida` (`Fk_Id_Hoja_Vida`),
   CONSTRAINT `hojas_vida_archivos_ibfk_1` FOREIGN KEY (`Fk_Id_Hoja_Vida`) REFERENCES `hojas_vida` (`Pk_Id_Hoja_Vida`)
-) ENGINE=InnoDB AUTO_INCREMENT=17606 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17741 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of hojas_vida_archivos
@@ -1218,6 +1753,140 @@ INSERT INTO `hojas_vida_archivos` VALUES ('17602', '1', '6429', '2016-04-29 10:2
 INSERT INTO `hojas_vida_archivos` VALUES ('17603', '1', '6437', '2016-04-29 10:51:06', '5');
 INSERT INTO `hojas_vida_archivos` VALUES ('17604', '1', '6438', '2016-04-29 11:09:19', '5');
 INSERT INTO `hojas_vida_archivos` VALUES ('17605', '1', '6439', '2016-04-29 11:21:12', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17606', '1', '6453', '2016-05-03 11:12:37', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17607', '1', '6440', '2016-05-03 11:46:50', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17608', '1', '6441', '2016-05-03 11:49:44', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17609', '1', '6442', '2016-05-03 11:50:05', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17611', '1', '6443', '2016-05-03 11:56:42', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17612', '1', '6446', '2016-05-03 11:56:54', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17613', '1', '6447', '2016-05-03 12:01:29', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17614', '1', '6449', '2016-05-03 12:03:57', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17615', '1', '6451', '2016-05-03 12:05:29', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17616', '1', '6445', '2016-05-03 12:07:53', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17617', '1', '6448', '2016-05-03 12:10:51', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17618', '1', '6450', '2016-05-03 12:12:21', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17619', '1', '6452', '2016-05-03 12:16:20', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17620', '1', '6454', '2016-05-03 12:16:50', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17621', '2', '6455', '2016-05-03 12:19:40', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17622', '1', '6456', '2016-05-03 12:21:38', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17623', '1', '6458', '2016-05-03 12:24:03', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17624', '1', '6459', '2016-05-03 12:24:49', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17625', '1', '6457', '2016-05-03 12:28:30', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17626', '1', '6460', '2016-05-03 15:54:46', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17627', '1', '6461', '2016-05-03 15:57:06', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17628', '1', '6462', '2016-05-03 15:57:09', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17629', '1', '6463', '2016-05-03 15:59:13', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17630', '1', '6464', '2016-05-03 15:59:29', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17631', '1', '6465', '2016-05-03 16:00:14', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17632', '1', '6466', '2016-05-03 16:01:52', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17633', '1', '6467', '2016-05-03 16:04:42', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17634', '1', '6468', '2016-05-03 16:06:49', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17635', '1', '6469', '2016-05-03 16:07:22', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17636', '1', '6470', '2016-05-04 09:15:54', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17637', '1', '6471', '2016-05-04 09:40:40', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17638', '1', '6472', '2016-05-04 09:50:36', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17639', '1', '6473', '2016-05-04 10:00:18', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17640', '1', '6474', '2016-05-04 10:12:33', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17641', '1', '6477', '2016-05-04 15:27:43', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17642', '1', '6475', '2016-05-04 15:35:44', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17643', '1', '6478', '2016-05-04 15:42:28', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17644', '1', '6480', '2016-05-04 15:53:23', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17645', '1', '6481', '2016-05-04 17:43:43', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17646', '1', '6486', '2016-05-04 17:44:57', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17647', '1', '6488', '2016-05-04 17:47:32', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17648', '1', '6482', '2016-05-04 19:27:27', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17649', '1', '6483', '2016-05-04 19:28:42', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17650', '1', '6484', '2016-05-04 19:31:12', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17651', '1', '6485', '2016-05-04 19:32:02', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17652', '1', '6487', '2016-05-04 19:33:10', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17653', '1', '6444', '2016-05-05 09:31:31', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17654', '1', '6489', '2016-05-05 09:41:19', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17655', '1', '6491', '2016-05-05 09:42:33', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17656', '1', '6490', '2016-05-05 09:44:49', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17657', '1', '6492', '2016-05-05 09:45:40', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17658', '1', '6493', '2016-05-05 09:47:02', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17659', '1', '6494', '2016-05-05 09:51:53', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17660', '1', '6495', '2016-05-05 09:52:06', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17661', '1', '6496', '2016-05-05 09:53:47', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17662', '1', '6498', '2016-05-05 09:54:12', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17663', '1', '6497', '2016-05-05 09:54:19', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17664', '1', '6499', '2016-05-05 09:58:56', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17665', '1', '6501', '2016-05-05 09:59:10', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17666', '1', '6500', '2016-05-05 10:00:48', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17667', '1', '6502', '2016-05-05 10:01:16', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17668', '1', '6503', '2016-05-05 10:02:36', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17669', '1', '6507', '2016-05-05 11:27:46', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17670', '1', '6515', '2016-05-05 11:33:02', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17671', '1', '6513', '2016-05-05 11:34:23', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17672', '1', '6508', '2016-05-05 11:34:45', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17673', '1', '6509', '2016-05-05 11:35:15', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17674', '1', '6511', '2016-05-05 11:37:00', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17675', '1', '6517', '2016-05-05 11:37:23', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17676', '1', '6521', '2016-05-05 11:39:39', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17677', '1', '6520', '2016-05-05 11:39:45', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17678', '1', '6518', '2016-05-05 11:40:39', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17679', '1', '6504', '2016-05-05 14:21:51', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17680', '1', '6506', '2016-05-05 14:25:21', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17681', '1', '6479', '2016-05-05 14:25:34', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17682', '1', '6505', '2016-05-05 14:26:31', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17683', '1', '6510', '2016-05-05 14:27:42', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17684', '1', '6512', '2016-05-05 14:28:37', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17685', '1', '6537', '2016-05-05 14:31:41', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17686', '1', '6514', '2016-05-05 14:33:19', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17687', '1', '6516', '2016-05-05 14:36:32', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17688', '1', '6538', '2016-05-05 14:38:30', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17689', '1', '6539', '2016-05-05 14:42:09', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17690', '1', '6519', '2016-05-05 14:42:44', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17691', '1', '6522', '2016-05-05 14:43:37', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17692', '1', '6525', '2016-05-05 14:43:56', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17693', '1', '6523', '2016-05-05 14:44:50', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17694', '1', '6524', '2016-05-05 14:45:47', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17695', '1', '6526', '2016-05-05 14:46:31', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17696', '1', '6540', '2016-05-05 15:04:20', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17697', '1', '6542', '2016-05-05 15:15:34', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17698', '1', '6544', '2016-05-05 15:19:24', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17699', '1', '6527', '2016-05-05 15:19:52', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17700', '1', '6528', '2016-05-05 15:20:31', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17701', '1', '6531', '2016-05-05 15:22:34', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17702', '1', '6529', '2016-05-05 15:22:38', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17703', '1', '6530', '2016-05-05 15:22:44', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17704', '1', '6546', '2016-05-05 15:23:11', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17705', '1', '6532', '2016-05-05 15:25:55', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17706', '1', '6536', '2016-05-05 15:30:35', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17707', '1', '6533', '2016-05-05 15:30:54', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17708', '1', '6534', '2016-05-05 15:31:42', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17709', '1', '6535', '2016-05-05 15:32:07', '30');
+INSERT INTO `hojas_vida_archivos` VALUES ('17710', '1', '6552', '2016-05-05 15:40:34', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17711', '1', '6579', '2016-05-05 16:22:19', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17712', '1', '6581', '2016-05-05 16:25:35', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17713', '1', '6582', '2016-05-05 16:30:38', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17714', '1', '6541', '2016-05-05 16:31:12', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17715', '1', '6571', '2016-05-05 16:33:32', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17716', '1', '6567', '2016-05-05 16:36:14', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17717', '1', '6561', '2016-05-05 16:36:24', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17718', '1', '6583', '2016-05-05 16:38:39', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17719', '1', '6563', '2016-05-05 16:41:33', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17720', '1', '6584', '2016-05-05 16:43:15', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17721', '1', '6558', '2016-05-05 16:44:14', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17722', '1', '6543', '2016-05-05 16:44:15', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17723', '1', '6554', '2016-05-05 16:45:09', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17724', '1', '6549', '2016-05-05 16:45:25', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17725', '1', '6547', '2016-05-05 16:45:41', '31');
+INSERT INTO `hojas_vida_archivos` VALUES ('17726', '1', '6585', '2016-05-05 16:48:32', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17727', '1', '6586', '2016-05-05 17:14:48', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17728', '1', '6587', '2016-05-05 17:24:30', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17729', '1', '6588', '2016-05-05 17:28:13', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17730', '1', '6589', '2016-05-06 08:39:55', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17731', '1', '6590', '2016-05-06 08:53:03', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17732', '1', '6591', '2016-05-06 09:00:23', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17733', '1', '6592', '2016-05-06 09:05:35', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17734', '1', '6593', '2016-05-06 09:17:54', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17735', '1', '6595', '2016-05-06 14:38:19', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17736', '1', '6596', '2016-05-06 14:44:04', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17737', '1', '6597', '2016-05-06 14:47:47', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17738', '1', '6598', '2016-05-06 14:55:50', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17739', '1', '6599', '2016-05-06 15:02:49', '5');
+INSERT INTO `hojas_vida_archivos` VALUES ('17740', '1', '6600', '2016-05-06 15:09:02', '5');
 
 -- ----------------------------
 -- Table structure for hojas_vida_capacitaciones
@@ -1364,7 +2033,7 @@ CREATE TABLE `permisos_contratista` (
   `Fk_Id_Usuario` int(11) DEFAULT NULL,
   `Fk_Id_Valor_Contratista` int(11) DEFAULT NULL,
   PRIMARY KEY (`Pk_Id_Permiso_Contratista`)
-) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=89 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of permisos_contratista
@@ -1373,6 +2042,10 @@ INSERT INTO `permisos_contratista` VALUES ('78', '1', '0');
 INSERT INTO `permisos_contratista` VALUES ('80', '6', '0');
 INSERT INTO `permisos_contratista` VALUES ('83', '7', '0');
 INSERT INTO `permisos_contratista` VALUES ('84', '5', '0');
+INSERT INTO `permisos_contratista` VALUES ('85', '3', '0');
+INSERT INTO `permisos_contratista` VALUES ('86', '30', '206');
+INSERT INTO `permisos_contratista` VALUES ('87', '31', '206');
+INSERT INTO `permisos_contratista` VALUES ('88', '32', '0');
 
 -- ----------------------------
 -- Table structure for remisiones
@@ -1417,16 +2090,19 @@ CREATE TABLE `solicitudes` (
   `Pk_Id_Solicitud` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único de la solicitud',
   `Accion_Descripcion` varchar(750) DEFAULT NULL COMMENT 'Descripción completa de la acción emprendida',
   `Direccion` varchar(75) DEFAULT NULL COMMENT 'Dirección de residencia del solicitante',
+  `Documento` varchar(75) DEFAULT NULL,
+  `Email` varchar(175) DEFAULT NULL,
   `Fecha_Cierre` datetime DEFAULT NULL COMMENT 'Fecha en la que se cierra la solicitud',
   `Fecha_Creacion` datetime DEFAULT NULL COMMENT 'Fecha en la que se creó la solicitud',
   `Fecha_Modificacion` datetime DEFAULT NULL COMMENT 'Fecha en la que se modificó la solicitud',
   `Fecha_Vinculacion` date DEFAULT NULL,
+  `Fk_Id_Area_Encargada` int(11) DEFAULT NULL COMMENT 'Identificador foráneo del área a la cual va la solicitud',
+  `Fk_Id_Documento_Tipo` int(11) DEFAULT NULL,
+  `Fk_Id_Lugar_Recepcion` int(11) DEFAULT NULL,
   `Fk_Id_Usuario` int(11) DEFAULT NULL COMMENT 'Identificador foráneo del usuario que ha creado la solicitud',
   `Fk_Id_Solicitud_Tipo` int(11) DEFAULT NULL COMMENT 'Identificador foráneo del tipo de solicitud',
   `Fk_Id_Recepcion_Forma` int(11) DEFAULT NULL COMMENT 'Identificador foráneo de la forma de la solicitud',
   `Fk_Id_Tramo` int(11) DEFAULT NULL COMMENT 'Id foráneo del tramo asociado a la solicitud',
-  `Fk_Id_Area_Encargada` int(11) DEFAULT NULL COMMENT 'Identificador foráneo del área a la cual va la solicitud',
-  `Fk_Id_Lugar_Recepcion` int(11) DEFAULT NULL,
   `Fk_Id_Tema` int(11) DEFAULT NULL COMMENT 'Identificador foráneo del tema asociado a la solicitud',
   `Fk_Id_Sector` int(11) DEFAULT NULL COMMENT 'Id foráneo del barrio o vereda',
   `Fk_Id_Solicitud_Accion` int(11) DEFAULT NULL COMMENT 'Identificador foráneo de la acción emprendida',
@@ -1450,23 +2126,23 @@ CREATE TABLE `solicitudes` (
   KEY `Fk_Id_Remision` (`Fk_Id_Remision`),
   KEY `Fk_Id_Sector` (`Fk_Id_Sector`),
   KEY `Fk_Id_Lugar_Recepcion` (`Fk_Id_Lugar_Recepcion`),
+  KEY `Fk_Id_Documento_Tipo` (`Fk_Id_Documento_Tipo`),
   CONSTRAINT `solicitudes_ibfk_11` FOREIGN KEY (`Fk_Id_Solicitud_Accion`) REFERENCES `tbl_solicitud_accion` (`Pk_Id_Solicitud_Accion`),
   CONSTRAINT `solicitudes_ibfk_12` FOREIGN KEY (`Fk_Id_Remision`) REFERENCES `remisiones` (`Pk_Id_Remision`),
   CONSTRAINT `solicitudes_ibfk_13` FOREIGN KEY (`Fk_Id_Sector`) REFERENCES `tbl_sectores` (`Pk_Id_Sector`),
   CONSTRAINT `solicitudes_ibfk_14` FOREIGN KEY (`Fk_Id_Recepcion_Forma`) REFERENCES `tbl_recepcion_forma` (`Pk_Id_Recepcion_Forma`),
   CONSTRAINT `solicitudes_ibfk_15` FOREIGN KEY (`Fk_Id_Lugar_Recepcion`) REFERENCES `tbl_recepcion_lugares` (`Pk_Id_Recepcion_Lugar`),
+  CONSTRAINT `solicitudes_ibfk_16` FOREIGN KEY (`Fk_Id_Documento_Tipo`) REFERENCES `tbl_documentos_tipos` (`Pk_Id_Documento_Tipo`),
   CONSTRAINT `solicitudes_ibfk_2` FOREIGN KEY (`Fk_Id_Tramo`) REFERENCES `tbl_tramos` (`Pk_Id_Tramo`),
   CONSTRAINT `solicitudes_ibfk_5` FOREIGN KEY (`Fk_Id_Solicitud_Tipo`) REFERENCES `tbl_solicitud_tipos` (`Pk_Id_Solicitud_Tipo`),
   CONSTRAINT `solicitudes_ibfk_6` FOREIGN KEY (`Fk_Id_Tema`) REFERENCES `tbl_temas` (`Pk_Id_Tema`),
   CONSTRAINT `solicitudes_ibfk_7` FOREIGN KEY (`Fk_Id_Area_Encargada`) REFERENCES `tbl_area_encargada` (`Pk_Id_Area_Encargada`),
   CONSTRAINT `solicitudes_ibfk_8` FOREIGN KEY (`Fk_Id_Solicitud_Estado`) REFERENCES `tbl_solicitud_estados` (`Pk_Id_Solicitud_Estado`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of solicitudes
 -- ----------------------------
-INSERT INTO `solicitudes` VALUES ('1', '', '', '1970-01-01 01:00:00', '2016-04-29 22:26:09', null, null, '1', '1', '4', '18', '6', null, '4', '165', null, '1', null, '', '', '', '', 'fhfgh', '');
-INSERT INTO `solicitudes` VALUES ('2', '', 'Carrera X', '1970-01-01 01:00:00', '2016-04-29 22:31:06', '2016-04-29 22:56:00', null, '1', '1', '2', '18', '15', '1', '6', '339', null, '1', null, 'JOHN', '2015002233', '', '', 'OK', '');
 
 -- ----------------------------
 -- Table structure for tbl_acciones
@@ -1642,7 +2318,7 @@ CREATE TABLE `tbl_cargos` (
   `Pk_Id_Cargo` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único del cargo',
   `Nombre` varchar(75) NOT NULL COMMENT 'Nombre del cargo',
   PRIMARY KEY (`Pk_Id_Cargo`)
-) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tbl_cargos
@@ -1661,6 +2337,26 @@ INSERT INTO `tbl_cargos` VALUES ('31', 'Comunicador');
 INSERT INTO `tbl_cargos` VALUES ('32', 'Secretaria');
 INSERT INTO `tbl_cargos` VALUES ('33', 'Digitador y apoyo operaciones');
 INSERT INTO `tbl_cargos` VALUES ('34', 'Asistente juridico');
+INSERT INTO `tbl_cargos` VALUES ('35', 'Director de Desarrollo de Software');
+
+-- ----------------------------
+-- Table structure for tbl_documentos_tipos
+-- ----------------------------
+DROP TABLE IF EXISTS `tbl_documentos_tipos`;
+CREATE TABLE `tbl_documentos_tipos` (
+  `Pk_Id_Documento_Tipo` int(11) NOT NULL AUTO_INCREMENT,
+  `Nombre` varchar(75) DEFAULT NULL,
+  `Abreviatura` varchar(75) DEFAULT NULL,
+  PRIMARY KEY (`Pk_Id_Documento_Tipo`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+-- Records of tbl_documentos_tipos
+-- ----------------------------
+INSERT INTO `tbl_documentos_tipos` VALUES ('1', 'NIT', 'NIT');
+INSERT INTO `tbl_documentos_tipos` VALUES ('2', 'Cédula de Ciudadanía', 'C.C.');
+INSERT INTO `tbl_documentos_tipos` VALUES ('3', 'Cédula de Extranjetría', 'C.E.');
+INSERT INTO `tbl_documentos_tipos` VALUES ('4', 'Pasaporte', 'P');
 
 -- ----------------------------
 -- Table structure for tbl_empresas
@@ -1670,11 +2366,12 @@ CREATE TABLE `tbl_empresas` (
   `Pk_Id_Empresa` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único de la empresa',
   `Nombre` varchar(75) NOT NULL COMMENT 'Nombre de la empresa',
   PRIMARY KEY (`Pk_Id_Empresa`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tbl_empresas
 -- ----------------------------
+INSERT INTO `tbl_empresas` VALUES ('1', 'VINUS S.A.S.');
 
 -- ----------------------------
 -- Table structure for tbl_frentes
@@ -1835,7 +2532,7 @@ CREATE TABLE `tbl_oficios` (
   `Nombre` text,
   `Calificado` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`Pk_Id_Oficio`)
-) ENGINE=InnoDB AUTO_INCREMENT=158 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=160 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tbl_oficios
@@ -1869,6 +2566,8 @@ INSERT INTO `tbl_oficios` VALUES ('154', 'Ayudante de maquinaria', '0');
 INSERT INTO `tbl_oficios` VALUES ('155', 'Almacenista', '1');
 INSERT INTO `tbl_oficios` VALUES ('156', 'Inspector o encargado de obra', '1');
 INSERT INTO `tbl_oficios` VALUES ('157', 'Operador de maquinaria pesada', '1');
+INSERT INTO `tbl_oficios` VALUES ('158', 'Director de Integración Tecnológica', '1');
+INSERT INTO `tbl_oficios` VALUES ('159', 'Asistente administrativa', '1');
 
 -- ----------------------------
 -- Table structure for tbl_permisos
@@ -1936,15 +2635,6 @@ INSERT INTO `tbl_permisos` VALUES ('27', '1');
 INSERT INTO `tbl_permisos` VALUES ('7', '1');
 INSERT INTO `tbl_permisos` VALUES ('5', '2');
 INSERT INTO `tbl_permisos` VALUES ('27', '2');
-INSERT INTO `tbl_permisos` VALUES ('57', '3');
-INSERT INTO `tbl_permisos` VALUES ('58', '3');
-INSERT INTO `tbl_permisos` VALUES ('59', '3');
-INSERT INTO `tbl_permisos` VALUES ('60', '3');
-INSERT INTO `tbl_permisos` VALUES ('61', '3');
-INSERT INTO `tbl_permisos` VALUES ('62', '3');
-INSERT INTO `tbl_permisos` VALUES ('67', '3');
-INSERT INTO `tbl_permisos` VALUES ('68', '3');
-INSERT INTO `tbl_permisos` VALUES ('63', '3');
 INSERT INTO `tbl_permisos` VALUES ('57', '4');
 INSERT INTO `tbl_permisos` VALUES ('58', '4');
 INSERT INTO `tbl_permisos` VALUES ('59', '4');
@@ -2000,6 +2690,59 @@ INSERT INTO `tbl_permisos` VALUES ('61', '5');
 INSERT INTO `tbl_permisos` VALUES ('62', '5');
 INSERT INTO `tbl_permisos` VALUES ('67', '5');
 INSERT INTO `tbl_permisos` VALUES ('68', '5');
+INSERT INTO `tbl_permisos` VALUES ('57', '3');
+INSERT INTO `tbl_permisos` VALUES ('58', '3');
+INSERT INTO `tbl_permisos` VALUES ('59', '3');
+INSERT INTO `tbl_permisos` VALUES ('60', '3');
+INSERT INTO `tbl_permisos` VALUES ('61', '3');
+INSERT INTO `tbl_permisos` VALUES ('62', '3');
+INSERT INTO `tbl_permisos` VALUES ('67', '3');
+INSERT INTO `tbl_permisos` VALUES ('68', '3');
+INSERT INTO `tbl_permisos` VALUES ('63', '3');
+INSERT INTO `tbl_permisos` VALUES ('66', '3');
+INSERT INTO `tbl_permisos` VALUES ('64', '3');
+INSERT INTO `tbl_permisos` VALUES ('75', '3');
+INSERT INTO `tbl_permisos` VALUES ('17', '30');
+INSERT INTO `tbl_permisos` VALUES ('38', '30');
+INSERT INTO `tbl_permisos` VALUES ('18', '30');
+INSERT INTO `tbl_permisos` VALUES ('57', '30');
+INSERT INTO `tbl_permisos` VALUES ('58', '30');
+INSERT INTO `tbl_permisos` VALUES ('59', '30');
+INSERT INTO `tbl_permisos` VALUES ('60', '30');
+INSERT INTO `tbl_permisos` VALUES ('61', '30');
+INSERT INTO `tbl_permisos` VALUES ('62', '30');
+INSERT INTO `tbl_permisos` VALUES ('67', '30');
+INSERT INTO `tbl_permisos` VALUES ('68', '30');
+INSERT INTO `tbl_permisos` VALUES ('63', '30');
+INSERT INTO `tbl_permisos` VALUES ('66', '30');
+INSERT INTO `tbl_permisos` VALUES ('64', '30');
+INSERT INTO `tbl_permisos` VALUES ('75', '30');
+INSERT INTO `tbl_permisos` VALUES ('17', '31');
+INSERT INTO `tbl_permisos` VALUES ('38', '31');
+INSERT INTO `tbl_permisos` VALUES ('18', '31');
+INSERT INTO `tbl_permisos` VALUES ('57', '31');
+INSERT INTO `tbl_permisos` VALUES ('58', '31');
+INSERT INTO `tbl_permisos` VALUES ('59', '31');
+INSERT INTO `tbl_permisos` VALUES ('60', '31');
+INSERT INTO `tbl_permisos` VALUES ('61', '31');
+INSERT INTO `tbl_permisos` VALUES ('62', '31');
+INSERT INTO `tbl_permisos` VALUES ('67', '31');
+INSERT INTO `tbl_permisos` VALUES ('68', '31');
+INSERT INTO `tbl_permisos` VALUES ('63', '31');
+INSERT INTO `tbl_permisos` VALUES ('66', '31');
+INSERT INTO `tbl_permisos` VALUES ('64', '31');
+INSERT INTO `tbl_permisos` VALUES ('75', '31');
+INSERT INTO `tbl_permisos` VALUES ('57', '32');
+INSERT INTO `tbl_permisos` VALUES ('58', '32');
+INSERT INTO `tbl_permisos` VALUES ('59', '32');
+INSERT INTO `tbl_permisos` VALUES ('60', '32');
+INSERT INTO `tbl_permisos` VALUES ('61', '32');
+INSERT INTO `tbl_permisos` VALUES ('62', '32');
+INSERT INTO `tbl_permisos` VALUES ('67', '32');
+INSERT INTO `tbl_permisos` VALUES ('68', '32');
+INSERT INTO `tbl_permisos` VALUES ('66', '32');
+INSERT INTO `tbl_permisos` VALUES ('64', '32');
+INSERT INTO `tbl_permisos` VALUES ('75', '32');
 
 -- ----------------------------
 -- Table structure for tbl_recepcion_forma
@@ -2027,16 +2770,18 @@ INSERT INTO `tbl_recepcion_forma` VALUES ('5', 'Correspondencia Física', 'CO');
 DROP TABLE IF EXISTS `tbl_recepcion_lugares`;
 CREATE TABLE `tbl_recepcion_lugares` (
   `Pk_Id_Recepcion_Lugar` int(11) NOT NULL AUTO_INCREMENT,
-  `Abreviatura` varchar(2) DEFAULT NULL,
+  `Abreviatura` varchar(3) DEFAULT NULL,
   `Nombre` varchar(75) DEFAULT NULL,
   PRIMARY KEY (`Pk_Id_Recepcion_Lugar`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of tbl_recepcion_lugares
 -- ----------------------------
-INSERT INTO `tbl_recepcion_lugares` VALUES ('1', 'OF', 'Oficina Fija');
-INSERT INTO `tbl_recepcion_lugares` VALUES ('2', 'OM', 'Oficina Móvil');
+INSERT INTO `tbl_recepcion_lugares` VALUES ('1', 'OF1', 'Oficina Fija 1');
+INSERT INTO `tbl_recepcion_lugares` VALUES ('2', 'OF2', 'Oficina Fija 2');
+INSERT INTO `tbl_recepcion_lugares` VALUES ('4', 'OM1', 'Oficina Móvil 1');
+INSERT INTO `tbl_recepcion_lugares` VALUES ('5', 'OM2', 'Oficina Móvil 2');
 
 -- ----------------------------
 -- Table structure for tbl_sectores
@@ -2551,15 +3296,16 @@ CREATE TABLE `tbl_solicitud_tipos` (
   `Nombre` varchar(75) NOT NULL COMMENT 'Nombre del tipo de la solicitud',
   `Abreviatura` varchar(1) DEFAULT NULL,
   PRIMARY KEY (`Pk_Id_Solicitud_Tipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tbl_solicitud_tipos
 -- ----------------------------
 INSERT INTO `tbl_solicitud_tipos` VALUES ('1', 'Queja', 'Q');
 INSERT INTO `tbl_solicitud_tipos` VALUES ('2', 'Reclamo', 'R');
-INSERT INTO `tbl_solicitud_tipos` VALUES ('3', 'Sugerencia', 'S');
+INSERT INTO `tbl_solicitud_tipos` VALUES ('3', 'Solicitud', 'S');
 INSERT INTO `tbl_solicitud_tipos` VALUES ('5', 'Petición', 'P');
+INSERT INTO `tbl_solicitud_tipos` VALUES ('6', 'Consulta', 'C');
 
 -- ----------------------------
 -- Table structure for tbl_temas
@@ -2689,11 +3435,16 @@ CREATE TABLE `tbl_tramos` (
   `Pk_Id_Tramo` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Identificador único del tramo',
   `Nombre` varchar(75) NOT NULL COMMENT 'Nombre del tramo',
   PRIMARY KEY (`Pk_Id_Tramo`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of tbl_tramos
 -- ----------------------------
-INSERT INTO `tbl_tramos` VALUES ('17', 'UF6 - Cisneros _ San José del NUS');
+INSERT INTO `tbl_tramos` VALUES ('17', 'UF5 Cisneros - Alto de Dolores');
 INSERT INTO `tbl_tramos` VALUES ('18', 'Oficina - Medellín');
 INSERT INTO `tbl_tramos` VALUES ('19', 'Oficina - Cisneros');
+INSERT INTO `tbl_tramos` VALUES ('20', 'UF1 - Pradera - Porcesito');
+INSERT INTO `tbl_tramos` VALUES ('21', 'UF2 - Porcesito - Santiago');
+INSERT INTO `tbl_tramos` VALUES ('22', 'UF3 - Túneles');
+INSERT INTO `tbl_tramos` VALUES ('23', 'UF4 - Variante Cisneros');
+INSERT INTO `tbl_tramos` VALUES ('24', 'UF6 - Hatovial');

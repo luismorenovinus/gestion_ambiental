@@ -83,7 +83,6 @@ $categorias = $this->hoja_vida_model->listar_categorias();
 				type: 'POST',
 				data: datos,
 				onSubmit : function(file , ext){
-					console.log(file);
 					//Se valida la extension del archivo
 					if (!(ext && /^(pdf|PDF)$/.test(ext))){
 						//Se muestra el error

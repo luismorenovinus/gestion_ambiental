@@ -113,6 +113,24 @@ Class Solicitud_model extends CI_Model{
         //Se ejecuta y retorna la consulta
         return $this->db->get('tbl_recepcion_lugares')->result();
     }//Fin cargar_estados()
+    
+    /**
+     * 
+     * Esta funcion carga los tipos de documento
+     * de un solicitante
+     *
+     * @param 
+     * @return array
+     * @throws 
+     */
+    function cargar_tipos_documentos(){
+        //Columnas a retornar
+        $this->db->select('*');
+        $this->db->order_by('Nombre');
+        
+        //Se ejecuta y retorna la consulta
+        return $this->db->get('tbl_documentos_tipos')->result();
+    }//Fin cargar_tipos_documentos()
 
     /**
      * 
@@ -464,54 +482,64 @@ Class Solicitud_model extends CI_Model{
         //Consulta
         $sql =
         "SELECT
-            solicitudes.Pk_Id_Solicitud,
-            solicitudes.Radicado_Entrada,
-            solicitudes.Nombres,
-            solicitudes.Fecha_Creacion,
-            solicitudes.Direccion,
-            solicitudes.Telefono,
-            tbl_sectores.Nombre Sector,
-            tbl_municipios.Nombre Municipio,
-            tbl_sectores_tipos.Nombre Tipo_Sector,
-            tbl_recepcion_forma.Nombre Forma_Recepcion,
-            tbl_recepcion_lugares.Nombre Lugar_Recepcion,
-            tbl_solicitud_tipos.Nombre Tipo_Solicitud,
-            solicitudes.Solicitud_Descripcion Descripcion_Solicitud,
-            tbl_solicitud_accion.Pk_Id_Solicitud_Accion,
-            tbl_solicitud_accion.Nombre Accion_Emprendida,
-            solicitudes.Accion_Descripcion Descripcion_Accion,
-            remisiones.Pk_Id_Remision,
-            solicitudes.Fk_Id_Solicitud_Estado,
-            funcionarios.Pk_Id_Funcionario,
-            CONCAT(funcionarios.Nombres,' ',funcionarios.Apellidos) AS Funcionario,
-            tbl_cargos.Nombre AS Cargo,
-            tbl_empresas.Nombre AS Empresa,
-            remisiones.Fecha AS Fecha_Remision,
-            remisiones.Radicado_Remision,
-            solicitudes.Fecha_Cierre,
-            solicitudes.Radicado_Salida AS Radicado_Respuesta,
-            solicitudes.Respuesta_Descripcion AS Descripcion_Respuesta,
-            tbl_area_encargada.Nombre AS Area_Encargada,
-            tbl_temas.Nombre AS Tema,
-            tbl_tramos.Nombre AS Tramo
+            s.Pk_Id_Solicitud,
+            s.Radicado_Entrada,
+            s.Nombres,
+            s.Fecha_Creacion,
+            s.Direccion,
+            s.Documento,
+            s.Email,
+            s.Fk_Id_Documento_Tipo,
+            s.Telefono,
+            se.Nombre AS Sector,
+            m.Nombre AS Municipio,
+            st.Nombre AS Tipo_Sector,
+            s.Fk_Id_Recepcion_Forma,
+            s.Fk_Id_Solicitud_Tipo,
+            f.Nombre AS Forma_Recepcion,
+            rl.Nombre AS Lugar_Recepcion,
+            ts.Nombre AS Tipo_Solicitud,
+            s.Solicitud_Descripcion AS Descripcion_Solicitud,
+            a.Pk_Id_Solicitud_Accion,
+            a.Nombre AS Accion_Emprendida,
+            s.Accion_Descripcion AS Descripcion_Accion,
+            re.Pk_Id_Remision,
+            s.Fk_Id_Solicitud_Estado,
+            fu.Pk_Id_Funcionario,
+            CONCAT(
+                fu.Nombres,
+                ' ',
+                fu.Apellidos
+            ) AS Funcionario,
+            ca.Nombre AS Cargo,
+            em.Nombre AS Empresa,
+            re.Fecha AS Fecha_Remision,
+            re.Radicado_Remision,
+            s.Fecha_Cierre,
+            s.Radicado_Salida AS Radicado_Respuesta,
+            s.Respuesta_Descripcion AS Descripcion_Respuesta,
+            ae.Nombre AS Area_Encargada,
+            te.Nombre AS Tema,
+            t.Nombre AS Tramo,
+            s.Fk_Id_Lugar_Recepcion
         FROM
-            solicitudes
-            LEFT JOIN tbl_tramos ON solicitudes.Fk_Id_Tramo = tbl_tramos.Pk_Id_Tramo
-            LEFT JOIN tbl_sectores ON solicitudes.Fk_Id_Sector = tbl_sectores.Pk_Id_Sector
-            LEFT JOIN tbl_municipios ON tbl_municipios.Pk_Id_Municipio = tbl_sectores.Fk_Id_Municipio
-            LEFT JOIN tbl_recepcion_forma ON tbl_recepcion_forma.Pk_Id_Recepcion_Forma = solicitudes.Fk_Id_Recepcion_Forma
-            LEFT JOIN tbl_solicitud_tipos ON solicitudes.Fk_Id_Solicitud_Tipo = tbl_solicitud_tipos.Pk_Id_Solicitud_Tipo
-            LEFT JOIN tbl_solicitud_accion ON solicitudes.Fk_Id_Solicitud_Accion = tbl_solicitud_accion.Pk_Id_Solicitud_Accion
-            LEFT JOIN remisiones ON remisiones.Pk_Id_Remision = solicitudes.Fk_Id_Remision
-            LEFT JOIN funcionarios ON remisiones.Fk_Id_Funcionario = funcionarios.Pk_Id_Funcionario
-            LEFT JOIN tbl_area_encargada ON solicitudes.Fk_Id_Area_Encargada = tbl_area_encargada.Pk_Id_Area_Encargada
-            LEFT JOIN tbl_temas ON solicitudes.Fk_Id_Tema = tbl_temas.Pk_Id_Tema
-            LEFT JOIN tbl_empresas ON tbl_empresas.Pk_Id_Empresa = funcionarios.Fk_Id_Empresa
-            LEFT JOIN tbl_cargos ON tbl_cargos.Pk_Id_Cargo = funcionarios.Fk_Id_Cargo
-            LEFT JOIN tbl_sectores_tipos ON tbl_sectores.Fk_Id_Sector_Tipo = tbl_sectores_tipos.Pk_Id_Sector_Tipo
-            LEFT JOIN tbl_recepcion_lugares ON solicitudes.Fk_Id_Lugar_Recepcion = tbl_recepcion_lugares.Pk_Id_Recepcion_Lugar
+            solicitudes AS s
+        LEFT JOIN tbl_tramos AS t ON s.Fk_Id_Tramo = t.Pk_Id_Tramo
+        LEFT JOIN tbl_sectores AS se ON s.Fk_Id_Sector = se.Pk_Id_Sector
+        LEFT JOIN tbl_municipios AS m ON m.Pk_Id_Municipio = se.Fk_Id_Municipio
+        LEFT JOIN tbl_recepcion_forma AS f ON f.Pk_Id_Recepcion_Forma = s.Fk_Id_Recepcion_Forma
+        LEFT JOIN tbl_solicitud_tipos AS ts ON s.Fk_Id_Solicitud_Tipo = ts.Pk_Id_Solicitud_Tipo
+        LEFT JOIN tbl_solicitud_accion AS a ON s.Fk_Id_Solicitud_Accion = a.Pk_Id_Solicitud_Accion
+        LEFT JOIN remisiones AS re ON re.Pk_Id_Remision = s.Fk_Id_Remision
+        LEFT JOIN funcionarios AS fu ON re.Fk_Id_Funcionario = fu.Pk_Id_Funcionario
+        LEFT JOIN tbl_area_encargada AS ae ON s.Fk_Id_Area_Encargada = ae.Pk_Id_Area_Encargada
+        LEFT JOIN tbl_temas AS te ON s.Fk_Id_Tema = te.Pk_Id_Tema
+        LEFT JOIN tbl_empresas AS em ON em.Pk_Id_Empresa = fu.Fk_Id_Empresa
+        LEFT JOIN tbl_cargos AS ca ON ca.Pk_Id_Cargo = fu.Fk_Id_Cargo
+        LEFT JOIN tbl_sectores_tipos AS st ON se.Fk_Id_Sector_Tipo = st.Pk_Id_Sector_Tipo
+        LEFT JOIN tbl_recepcion_lugares AS rl ON s.Fk_Id_Lugar_Recepcion = rl.Pk_Id_Recepcion_Lugar
         WHERE
-            solicitudes.Pk_Id_Solicitud = {$id_solicitud}";
+            s.Pk_Id_Solicitud = {$id_solicitud}";
 
         //Se ejecuta y retorna la consulta
         return $this->db->query($sql)->row();

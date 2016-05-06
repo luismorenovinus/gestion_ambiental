@@ -4,7 +4,7 @@
 		<div class="span6">
 			<div class="box-header"><h2>Plantilla de solicitudes</h2></div>
 		    <div class="box-content">
-				<button class="btn btn-large btn-block btn-danger btn-primary" type="button" onClick="window.location = 'reporte/plantilla_solicitud'">Generar PDF</button>
+				<button class="btn btn-large btn-block btn-danger btn-primary" type="button" onClick="window.location = 'reporte/solicitud_recepcion'">Generar PDF</button>
 		    </div>
 		</div>
 	<?php } ?>

@@ -72,6 +72,8 @@ Class Solicitud extends CI_Controller{
         $this->data['funcionarios'] = $this->solicitud_model->cargar_funcionarios();
         //Se cargan los lugares de recepción
         $this->data['lugares'] = $this->solicitud_model->cargar_lugares_recepcion();
+        //Se cargan los tipos de documentos
+        $this->data['tipos_documentos'] = $this->solicitud_model->cargar_tipos_documentos();
         
         /*
          * Se cargan los datos dinamicos para la interfaz
@@ -124,6 +126,9 @@ Class Solicitud extends CI_Controller{
             $fecha_cierre = date('Y-m-d H:i:s', strtotime($this->input->post('fecha_respuesta')));
             $radicado_salida = $this->input->post('radicado_salida');
             $descripcion_respuesta = $this->input->post('descripcion_respuesta');
+            $id_tipo_documento = $this->input->post("tipo_documento");
+            $documento = $this->input->post("numero_documento");
+            $email = $this->input->post("email");
 
             //Se pregunta por el estado de la solicitud
             if($radicado_salida != ''){
@@ -178,7 +183,10 @@ Class Solicitud extends CI_Controller{
                 'Fk_Id_Sector' => $sector,
                 'Fk_Id_Solicitud_Accion' => $accion_emprendida,
                 'Fk_Id_Solicitud_Estado' => $estado_solicitud,
-                'Fk_Id_Remision' => $id_remision
+                'Fk_Id_Remision' => $id_remision,
+                'Fk_Id_Documento_Tipo' => $id_tipo_documento,
+                'Documento' => $documento,
+                'Email' => $email
             );
 
             //Se inserta el registro en base de datos que guarda la solicitud
