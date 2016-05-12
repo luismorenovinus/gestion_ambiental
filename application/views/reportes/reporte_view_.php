@@ -68,7 +68,7 @@
 									<option value="<?php echo $mes['Numero']; ?>"><?php echo $mes['Nombre']; ?></option>
 								<?php } ?>
 			    			</select>
-							
+
 							<!-- Clic -->
 				    		<button class="btn btn-large btn-block btn-danger btn-primary" id="btn_registro_fotografico" type="button">Registro Fotográfico Mensual</button>
 			    		</div>
@@ -99,9 +99,9 @@
 	 <div class="box-header"><h2>Informes ICA</h2></div>
 	    <div class="box-content">
 	    	<div class="row-fluid">
-	    		
-	    		
-		    	
+
+
+
 	    	</div>
 	    </div>
 	</div>
@@ -140,7 +140,7 @@
 				$(".mensaje").html('<div class="alert"><button class="close" data-dismiss="alert">&times;</button>Aun no se puede generar el reporte.\n\
                 Seleccione área, año y mes.</div>');
 			} else {
-				window.location = "reporte/registro_fotografico/" + $("#area").val() + "/" + $("#anio").val() + "/" + $("#mes").val(); 
+				window.location = "reporte/registro_fotografico/" + $("#area").val() + "/" + $("#anio").val() + "/" + $("#mes").val();
 			}
 		});
 
